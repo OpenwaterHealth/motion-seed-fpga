@@ -1,0 +1,212 @@
+----------------------------------------------------------------------
+Report for cell top.TECH
+Register bits:  609 of 2352 (25.893%)
+I/O cells:      33
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         2          100.0
+                              CCU2D        84          100.0
+                            FD1P3AX       238          100.0
+                            FD1P3AY        72          100.0
+                            FD1P3BX         3          100.0
+                            FD1P3DX        74          100.0
+                            FD1P3IX        48          100.0
+                            FD1P3JX         3          100.0
+                             FD1S1B         4          100.0
+                             FD1S1D        30          100.0
+                            FD1S3AX        80          100.0
+                            FD1S3AY         4          100.0
+                            FD1S3BX        10          100.0
+                            FD1S3DX        21          100.0
+                            FD1S3IX        21          100.0
+                            FD1S3JX         1          100.0
+                                GSR         1          100.0
+                                 IB         6          100.0
+                                INV         3          100.0
+                            L6MUX21        10          100.0
+                               LUT4       736          100.0
+                                 OB        25          100.0
+                              PFUMX        74          100.0
+SUB MODULES
+                        adc_control         1
+              dds_control_interface         1
+                   dds_gain_control         1
+                             filter         1
+                          filter_U0         1
+                         heart_beat         1
+                      i2c_slave_top         1
+                i2cslave_controller         1
+            i2cslave_controller_top         1
+                          registers         1
+                    reset_generator         1
+                              TOTAL      1561
+----------------------------------------------------------------------
+Report for cell i2c_slave_top.v1
+Instance Path : i2c_slave_top
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            6.0
+                            FD1P3AX       132           55.5
+                            FD1P3AY        32           44.4
+                            FD1P3DX         8           10.8
+                            FD1P3IX         5           10.4
+                             FD1S1D         8           26.7
+                            FD1S3AX        18           22.5
+                            FD1S3AY         2           50.0
+                            FD1S3BX        10          100.0
+                            FD1S3DX        14           66.7
+                            FD1S3IX        19           90.5
+                                INV         2           66.7
+                            L6MUX21        10          100.0
+                               LUT4       419           56.9
+                              PFUMX        53           71.6
+SUB MODULES
+                             filter         1
+                          filter_U0         1
+                i2cslave_controller         1
+            i2cslave_controller_top         1
+                          registers         1
+                              TOTAL       742
+----------------------------------------------------------------------
+Report for cell registers.v1
+Instance Path : i2c_slave_top.registers
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         5            6.0
+                            FD1P3AX       120           50.4
+                            FD1P3AY        32           44.4
+                            FD1P3DX         4            5.4
+                            FD1P3IX         4            8.3
+                             FD1S1D         8           26.7
+                            FD1S3AX         2            2.5
+                            FD1S3BX         8           80.0
+                            FD1S3DX         8           38.1
+                            FD1S3IX         8           38.1
+                            L6MUX21         9           90.0
+                               LUT4       234           31.8
+                              PFUMX        50           67.6
+                              TOTAL       492
+----------------------------------------------------------------------
+Report for cell i2cslave_controller_top.v1
+Instance Path : i2c_slave_top.i2cslave_controller_top
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        12            5.0
+                            FD1P3DX         4            5.4
+                            FD1P3IX         1            2.1
+                            FD1S3AX        16           20.0
+                            FD1S3AY         2           50.0
+                            FD1S3BX         2           20.0
+                            FD1S3DX         6           28.6
+                            FD1S3IX        11           52.4
+                                INV         2           66.7
+                            L6MUX21         1           10.0
+                               LUT4       185           25.1
+                              PFUMX         3            4.1
+SUB MODULES
+                             filter         1
+                          filter_U0         1
+                i2cslave_controller         1
+                              TOTAL       248
+----------------------------------------------------------------------
+Report for cell i2cslave_controller.v1
+Instance Path : i2c_slave_top.i2cslave_controller_top.i2cslave_controller_u1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        10            4.2
+                            FD1P3DX         4            5.4
+                            FD1P3IX         1            2.1
+                            FD1S3AX        10           12.5
+                            FD1S3AY         2           50.0
+                            FD1S3BX         2           20.0
+                            FD1S3DX         6           28.6
+                            FD1S3IX        11           52.4
+                                INV         1           33.3
+                            L6MUX21         1           10.0
+                               LUT4       180           24.5
+                              PFUMX         3            4.1
+                              TOTAL       231
+----------------------------------------------------------------------
+Report for cell filter.v1
+Instance Path : i2c_slave_top.i2cslave_controller_top.filter_sda_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            0.4
+                            FD1S3AX         3            3.8
+                               LUT4         3            0.4
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell filter_U0.v1
+Instance Path : i2c_slave_top.i2cslave_controller_top.filter_scl_inst
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         1            0.4
+                            FD1S3AX         3            3.8
+                                INV         1           33.3
+                               LUT4         2            0.3
+                              TOTAL         7
+----------------------------------------------------------------------
+Report for cell dds_gain_control.v1
+Instance Path : dds_gain_control
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        41           48.8
+                            FD1P3AX        31           13.0
+                            FD1P3AY        39           54.2
+                            FD1P3BX         3          100.0
+                            FD1P3DX        48           64.9
+                            FD1P3IX        21           43.8
+                            FD1S3AX        17           21.3
+                            FD1S3DX         2            9.5
+                               LUT4       132           17.9
+                              PFUMX        20           27.0
+                              TOTAL       354
+----------------------------------------------------------------------
+Report for cell reset_generator.v1
+Instance Path : reset_generator
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3DX         1            1.4
+                            FD1S3DX         4           19.0
+                               LUT4         3            0.4
+                              TOTAL         8
+----------------------------------------------------------------------
+Report for cell adc_control.v1
+Instance Path : adc_control
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        10           11.9
+                            FD1P3AX        68           28.6
+                            FD1P3IX        19           39.6
+                            FD1P3JX         3          100.0
+                            FD1S3AX         1            1.3
+                               LUT4        56            7.6
+                              PFUMX         1            1.4
+                              TOTAL       158
+----------------------------------------------------------------------
+Report for cell dds_control_interface.v1
+Instance Path : dds_control_interface
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14           16.7
+                            FD1P3AX         7            2.9
+                            FD1P3AY         1            1.4
+                            FD1P3DX        17           23.0
+                            FD1P3IX         3            6.3
+                             FD1S1B         4          100.0
+                             FD1S1D        22           73.3
+                            FD1S3AX        20           25.0
+                            FD1S3AY         2           50.0
+                            FD1S3DX         1            4.8
+                            FD1S3IX         2            9.5
+                            FD1S3JX         1          100.0
+                               LUT4       120           16.3
+                              TOTAL       214
+----------------------------------------------------------------------
+Report for cell heart_beat.v1
+Instance Path : heart_beat
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14           16.7
+                            FD1S3AX        24           30.0
+                              TOTAL        38

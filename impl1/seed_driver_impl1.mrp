@@ -1,0 +1,996 @@
+
+             Lattice Mapping Report File for Design Module 'top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-2000HC -t TQFP100 -s 4 -oc Commercial
+     seed_driver_impl1.ngd -o seed_driver_impl1_map.ncd -pr
+     seed_driver_impl1.prf -mp seed_driver_impl1.mrp -lpf C:/Project/Working/FPG
+     A/HOME/Lattice/Seed_Driver/Rev_5/impl1/seed_driver_impl1.lpf -lpf
+     C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/seed_driver.lpf -gui
+     -msgset C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/promote.xml
+     
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-2000HCTQFP100
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  04/08/25  23:20:39
+
+Design Summary
+--------------
+
+   Number of registers:    609 out of  2352 (26%)
+      PFU registers:          609 out of  2112 (29%)
+      PIO registers:            0 out of   240 (0%)
+   Number of SLICEs:       679 out of  1056 (64%)
+      SLICEs as Logic/ROM:    679 out of  1056 (64%)
+      SLICEs as RAM:            0 out of   792 (0%)
+      SLICEs as Carry:         84 out of  1056 (8%)
+   Number of LUT4s:        913 out of  2112 (43%)
+      Number used as logic LUTs:        745
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      168
+      Number used as shift registers:     0
+   Number of PIO sites used: 33 + 4(JTAG) out of 80 (46%)
+   Number of block RAMs:  0 out of 8 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 1 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  19
+     Net seed_spare1_c: 26 loads, 26 rising, 0 falling (Driver:
+
+                                    Page 1
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Design Summary (cont)
+---------------------
+     dds_gain_control/sck_temp_126 )
+     Net clk_10mhz_c: 240 loads, 231 rising, 9 falling (Driver: PIO clk_10mhz )
+     Net i2c_slave_top/registers/data_vld_dly: 20 loads, 20 rising, 0 falling
+     (Driver: i2c_slave_top/registers/data_vld_dly_162 )
+     Net i2c_slave_top/addr_i_7__N_595: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_199_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_591: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_195_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_592: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_196_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_593: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_197_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_594: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_198_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_590: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_194_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_587: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__I_0_20
+     8_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/addr_i_7__N_596: 1 loads, 1 rising, 0 falling (Driver: i2
+     c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_i_7__N_588_
+     I_0_200_2_lut_3_lut_4_lut )
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg: 2
+     loads, 1 rising, 1 falling (Driver:
+     i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg_749 )
+     Net i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n: 23 loads,
+     16 rising, 7 falling (Driver:
+     i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n_16 )
+     Net reset_generator/clk_d2: 3 loads, 3 rising, 0 falling (Driver:
+     reset_generator/clk_d2_19 )
+     Net adc_control/adc_sck_temp: 51 loads, 51 rising, 0 falling (Driver:
+     adc_control/adc_sck_temp_134 )
+     Net dds_control_interface/count_7__N_1284: 4 loads, 4 rising, 0 falling
+     (Driver: dds_control_interface/i1_2_lut_3_lut_3_lut_adj_127 )
+     Net dds_control_interface/data_temp_15__N_1301: 9 loads, 9 rising, 0
+     falling (Driver: dds_control_interface/i1_2_lut_3_lut_adj_126 )
+     Net dds_control_interface/state_3__N_1257: 1 loads, 1 rising, 0 falling
+     (Driver: dds_control_interface/i6470_4_lut_4_lut )
+     Net heart_beat/prescale[15]: 5 loads, 5 rising, 0 falling (Driver:
+     heart_beat/prescale_1535__i15 )
+   Number of Clock Enables:  88
+     Net reset_n: 1 loads, 1 LSLICEs
+     Net state_1: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_205: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_222: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_96: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_111: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_126: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_141: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_156: 5 loads, 5 LSLICEs
+
+                                    Page 2
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Design Summary (cont)
+---------------------
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_171: 5 loads, 5 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_197: 5 loads, 5 LSLICEs
+     Net i2c_slave_top/registers/clk_N_1433_enable_8: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/data_vld_dly_enable_1: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/registers/state_0: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_214: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_104: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_134: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/data_vld_dly_enable_2: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_190: 5 loads, 5 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_259: 5 loads, 5 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_119: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_149: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_164: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/clk_10mhz_c_enable_179: 4 loads, 4 LSLICEs
+     Net control_3: 16 loads, 16 LSLICEs
+     Net i2c_slave_top/registers/data_vld_dly_enable_3: 1 loads, 1 LSLICEs
+     Net clk_10mhz_c_enable_89: 8 loads, 8 LSLICEs
+     Net i2c_slave_top/registers/count_3__N_643: 2 loads, 2 LSLICEs
+     Net clk_10mhz_c_enable_54: 9 loads, 9 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count_i_3_
+     _N_129: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_4: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/wr_done_i_
+     N_418: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_2: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_3: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_5: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_6: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_7: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_8: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_9: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_10: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_12: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enab
+     le_11: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/filter_sda_inst/out_n_N_71: 1
+     loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n_N_71: 1
+     loads, 1 LSLICEs
+     Net dds_gain_control/seed_spare1_c_enable_34: 21 loads, 21 LSLICEs
+     Net dds_gain_control/seed_spare1_c_enable_20: 4 loads, 4 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_2: 2 loads, 2 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_3: 1 loads, 1 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_265: 3 loads, 3 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_232: 2 loads, 2 LSLICEs
+
+                                    Page 3
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Design Summary (cont)
+---------------------
+     Net dds_gain_control/clk_10mhz_c_enable_229: 9 loads, 9 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_251: 8 loads, 8 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_264: 1 loads, 1 LSLICEs
+     Net dds_gain_control/seed_spare1_c_enable_29: 1 loads, 1 LSLICEs
+     Net dds_gain_control/clk_10mhz_c_enable_263: 1 loads, 1 LSLICEs
+     Net reset_generator/reset_n_N_4: 1 loads, 1 LSLICEs
+     Net adc_control/adc_sck_temp_enable_72: 5 loads, 5 LSLICEs
+     Net adc_control/adc_sck_temp_enable_20: 2 loads, 2 LSLICEs
+     Net adc_control/clk_10mhz_c_enable_10: 1 loads, 1 LSLICEs
+     Net adc_control/adc_sck_temp_enable_21: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_62: 16 loads, 16 LSLICEs
+     Net adc_control/adc_sck_temp_enable_4: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_64: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_22: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_23: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_24: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_25: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_26: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_27: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_28: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_29: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_30: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_31: 2 loads, 2 LSLICEs
+     Net adc_control/adc_sck_temp_enable_32: 2 loads, 2 LSLICEs
+     Net adc_control/clk_10mhz_c_enable_258: 2 loads, 2 LSLICEs
+     Net adc_control/clk_10mhz_c_enable_23: 1 loads, 1 LSLICEs
+     Net adc_control/clk_10mhz_c_enable_24: 1 loads, 1 LSLICEs
+     Net adc_control/clk_10mhz_c_enable_255: 5 loads, 5 LSLICEs
+     Net adc_control/clk_10mhz_c_enable_260: 1 loads, 1 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_74: 8 loads, 8 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_262: 2 loads, 2 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_8: 1 loads, 1 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_9: 1 loads, 1 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_223: 1 loads, 1 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_230: 2 loads, 2 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_59: 1 loads, 1 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_233: 2 loads, 2 LSLICEs
+     Net dds_control_interface/clk_10mhz_c_enable_261: 1 loads, 1 LSLICEs
+   Number of LSRs:  41
+     Net rstn_c: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/n6165: 8 loads, 8 LSLICEs
+     Net i2c_slave_top/n12573: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_595: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_625: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_591: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_616: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_592: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_619: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_593: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_622: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_594: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/state_1_N_839_0: 4 loads, 4 LSLICEs
+     Net i2c_slave_top/registers/n566: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_613: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_590: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_610: 2 loads, 2 LSLICEs
+
+                                    Page 4
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Design Summary (cont)
+---------------------
+     Net i2c_slave_top/addr_i_7__N_587: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_597: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_628: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/addr_i_7__N_596: 1 loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state
+     _i_3__N_78: 7 loads, 7 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n12587: 1
+     loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg: 1
+     loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_dete
+     ct_i_N_340: 2 loads, 2 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n4762: 1
+     loads, 1 LSLICEs
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n3913: 1
+     loads, 1 LSLICEs
+     Net dds_gain_control/state_3__N_882: 36 loads, 36 LSLICEs
+     Net dds_gain_control/n3915: 2 loads, 2 LSLICEs
+     Net dds_gain_control/n6197: 9 loads, 9 LSLICEs
+     Net dds_gain_control/n6840: 1 loads, 1 LSLICEs
+     Net dds_gain_control/n6870: 1 loads, 1 LSLICEs
+     Net adc_control/adc_sck_temp_enable_62: 1 loads, 1 LSLICEs
+     Net adc_control/n6163: 5 loads, 5 LSLICEs
+     Net adc_control/n6279: 5 loads, 5 LSLICEs
+     Net adc_control/n6276: 2 loads, 2 LSLICEs
+     Net dds_control_interface/state_3__N_1254: 14 loads, 14 LSLICEs
+     Net dds_control_interface/n12627: 10 loads, 10 LSLICEs
+     Net dds_control_interface/ss0_temp: 1 loads, 1 LSLICEs
+     Net dds_control_interface/ss0_temp_dd: 1 loads, 1 LSLICEs
+     Net dds_control_interface/n3921: 3 loads, 3 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net i2c_slave_top/n12641: 69 loads
+     Net i2c_slave_top/registers/addr_i_2: 64 loads
+     Net i2c_slave_top/registers/n12637: 55 loads
+     Net dds_control_interface/cstate_2: 39 loads
+     Net dds_gain_control/state_3__N_882: 36 loads
+     Net i2c_slave_top/registers/n12631: 36 loads
+     Net i2c_slave_top/n12639: 32 loads
+     Net dds_control_interface/state_2: 29 loads
+     Net dds_gain_control/state_1: 29 loads
+     Net i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state
+     _i_3__N_78: 29 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+
+                                    Page 5
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| seed_laser_disable  | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_mod_ss         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_mod_sck        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_mod_mosi       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| sda                 | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| scl                 | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_laser_en_led_n | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_adc_sck        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_adc_convert    | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| over_current_shutdown_n| OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_dac_mosi       | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_dac_ss         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_dac_sck        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_ldac_n         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_reset_n        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| heartbeat_n         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| mcu_gpio            | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_spare1         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_spare2         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_spare3         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_spare4         | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_gpio1          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_gpio2          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_gpio3          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_gpio4          | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| spare_led1_n        | OUTPUT    | LVCMOS25  |            |
+
+                                    Page 6
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| spare_led2_n        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| rstn                | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| system_reset_n      | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk_10mhz           | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_adc_sdo1       | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_adc_sdo2       | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| seed_compared       | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal clk_N_1433 was merged into signal clk_10mhz_c
+Signal dds_control_interface/ss0_temp_N_1263 was merged into signal
+     dds_control_interface/ss0_temp
+Signal reset_generator/rstn_N_6 was merged into signal rstn_c
+Signal i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg__inv
+     was merged into signal
+     i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg
+Signal n12011 was merged into signal state_2
+Signal n12010 was merged into signal state_3
+Signal n12947 undriven or does not drive anything - clipped.
+Signal heart_beat/count_1534_1701_add_4_1/S0 undriven or does not drive anything
+     - clipped.
+Signal heart_beat/count_1534_1701_add_4_1/CI undriven or does not drive anything
+     - clipped.
+Signal heart_beat/count_1534_1701_add_4_9/S1 undriven or does not drive anything
+     - clipped.
+Signal heart_beat/count_1534_1701_add_4_9/CO undriven or does not drive anything
+     - clipped.
+Signal heart_beat/prescale_1535_add_4_1/S0 undriven or does not drive anything -
+     clipped.
+Signal heart_beat/prescale_1535_add_4_1/CI undriven or does not drive anything -
+     clipped.
+Signal heart_beat/prescale_1535_add_4_17/S1 undriven or does not drive anything
+     - clipped.
+Signal heart_beat/prescale_1535_add_4_17/CO undriven or does not drive anything
+     - clipped.
+Signal dds_control_interface/add_604_1/S0 undriven or does not drive anything -
+     clipped.
+Signal dds_control_interface/add_604_1/CI undriven or does not drive anything -
+     clipped.
+Signal dds_control_interface/add_604_17/S1 undriven or does not drive anything -
+     clipped.
+Signal dds_control_interface/add_604_17/CO undriven or does not drive anything -
+     clipped.
+Signal dds_control_interface/sub_11_add_2_1/S0 undriven or does not drive
+     anything - clipped.
+Signal dds_control_interface/sub_11_add_2_1/CI undriven or does not drive
+
+                                    Page 7
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal dds_control_interface/sub_11_add_2_9/S1 undriven or does not drive
+     anything - clipped.
+Signal dds_control_interface/sub_11_add_2_9/CO undriven or does not drive
+     anything - clipped.
+Signal adc_control/convert_count_1540_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal adc_control/convert_count_1540_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal adc_control/convert_count_1540_add_4_9/S1 undriven or does not drive
+     anything - clipped.
+Signal adc_control/convert_count_1540_add_4_9/CO undriven or does not drive
+     anything - clipped.
+Signal adc_control/sub_12_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal adc_control/sub_12_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal adc_control/sub_12_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal adc_control/sub_12_add_2_9/CO undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_1108_add_2_17/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_17/CO undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/dac_count_1536_add_4_17/S1 undriven or does not drive
+     anything - clipped.
+Signal dds_gain_control/dac_count_1536_add_4_17/CO undriven or does not drive
+     anything - clipped.
+Signal dds_gain_control/add_602_1/S1 undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/add_602_1/S0 undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/add_602_1/CI undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_1110_add_2_1/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_1/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_1/CI undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_10_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_10_add_2_1/CI undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_1110_add_2_3/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_3/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_10_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_10_add_2_9/CO undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_1110_add_2_5/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_5/S0 undriven or does not drive anything
+
+                                    Page 8
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_7/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_7/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_9/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_9/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_11/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_11/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_13/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_13/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_15/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_15/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_17/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1110_add_2_17/CO undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_1/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_1/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_1/CI undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_3/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_3/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_5/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_5/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/add_602_17/CO undriven or does not drive anything -
+     clipped.
+Signal dds_gain_control/sub_1108_add_2_7/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_7/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_9/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_9/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_11/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_11/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_13/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_13/S0 undriven or does not drive anything
+
+                                    Page 9
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+Removed logic (cont)
+--------------------
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_15/S1 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/sub_1108_add_2_15/S0 undriven or does not drive anything
+     - clipped.
+Signal dds_gain_control/dac_count_1536_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal dds_gain_control/dac_count_1536_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal i2c_slave_top/registers/add_237_9/S1 undriven or does not drive anything
+     - clipped.
+Signal i2c_slave_top/registers/add_237_9/CO undriven or does not drive anything
+     - clipped.
+Signal i2c_slave_top/registers/add_237_1/S0 undriven or does not drive anything
+     - clipped.
+Signal i2c_slave_top/registers/add_237_1/CI undriven or does not drive anything
+     - clipped.
+Block i9858 was optimized away.
+Block dds_control_interface/ss0_temp_I_0_1_lut was optimized away.
+Block reset_generator/rstn_I_0_1_lut was optimized away.
+Block i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/i9859 was
+     optimized away.
+Block i9321_3_lut was optimized away.
+Block i9320_3_lut was optimized away.
+Block m0_lut was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'reset_n'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'reset_n' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 156 
+
+     Type and instance name of component: 
+   Register : i2c_slave_top/registers/state_i0
+   Register : i2c_slave_top/registers/byte_cnt_i0
+   Register : i2c_slave_top/registers/i3482
+   Register : i2c_slave_top/registers/addr_i_reg_i5_3499_3500_set
+
+                                   Page 10
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+GSR Usage (cont)
+----------------
+   Register : i2c_slave_top/registers/addr_i_reg_i4_3495_3496_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i4_3495_3496_set
+   Register : i2c_slave_top/registers/addr_i_reg_i3_3491_3492_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i3_3491_3492_set
+   Register : i2c_slave_top/registers/addr_i_reg_i2_3487_3488_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i2_3487_3488_set
+   Register : i2c_slave_top/registers/byte_cnt_i1
+   Register : i2c_slave_top/registers/state_i1
+   Register : i2c_slave_top/registers/i3486
+   Register : i2c_slave_top/registers/i3490
+   Register : i2c_slave_top/registers/i3494
+   Register : i2c_slave_top/registers/i3498
+   Register : i2c_slave_top/registers/i3502
+   Register : i2c_slave_top/registers/i3506
+   Register : i2c_slave_top/registers/addr_i_reg_i1_3483_3484_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i1_3483_3484_set
+   Register : i2c_slave_top/registers/addr_i_reg_i0_3479_3480_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i0_3479_3480_set
+   Register : i2c_slave_top/registers/i3478
+   Register : i2c_slave_top/registers/addr_i_reg_i7_3507_3508_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i5_3499_3500_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i7_3507_3508_set
+   Register : i2c_slave_top/registers/addr_i_reg_i6_3503_3504_reset
+   Register : i2c_slave_top/registers/addr_i_reg_i6_3503_3504_set
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/stop_
+        detect_i_752
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_w
+        r_data_i_756
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/reset
+        _bus_i_758
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_
+        state_i_FSM_i1
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start
+        _detect_i_747
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count
+        _i_i0_i2
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count
+        _i_i0_i1
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i1
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/not_w
+        rite_ack_i_772
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count
+        _i_i0_i3
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_
+        state_i_FSM_i2
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_
+        state_i_FSM_i5
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_
+        state_i_FSM_i6
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i8
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i7
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i6
+
+                                   Page 11
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+GSR Usage (cont)
+----------------
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i5
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i4
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i3
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count
+        _i_i0_i0
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_
+        buffer_i_i0_i2
+   Register : dds_gain_control/data_temp__i15
+   Register : dds_gain_control/count_i0_i0
+   Register : dds_gain_control/data_temp__i8
+   Register : dds_gain_control/mosi_temp_132
+   Register : dds_gain_control/data_i0
+   Register : dds_gain_control/data_temp__i7
+   Register : dds_gain_control/data_temp__i14
+   Register : dds_gain_control/data_temp__i6
+   Register : dds_gain_control/data_temp__i13
+   Register : dds_gain_control/data_temp__i5
+   Register : dds_gain_control/data_temp__i4
+   Register : dds_gain_control/data_temp__i3
+   Register : dds_gain_control/data_temp__i2
+   Register : dds_gain_control/data_temp__i1
+   Register : dds_gain_control/count_i0_i7
+   Register : dds_gain_control/count_i0_i6
+   Register : dds_gain_control/count_i0_i5
+   Register : dds_gain_control/count_i0_i4
+   Register : dds_gain_control/count_i0_i3
+   Register : dds_gain_control/count_i0_i2
+   Register : dds_gain_control/count_i0_i1
+   Register : dds_gain_control/data_temp__i23
+   Register : dds_gain_control/data_i20
+   Register : dds_gain_control/data_i19
+   Register : dds_gain_control/data_i16
+   Register : dds_gain_control/data_i15
+   Register : dds_gain_control/data_i14
+   Register : dds_gain_control/data_i13
+   Register : dds_gain_control/data_i12
+   Register : dds_gain_control/data_i11
+   Register : dds_gain_control/data_i10
+   Register : dds_gain_control/data_i9
+   Register : dds_gain_control/data_i8
+   Register : dds_gain_control/data_i7
+   Register : dds_gain_control/data_i6
+   Register : dds_gain_control/data_i5
+   Register : dds_gain_control/data_i4
+   Register : dds_gain_control/data_i3
+   Register : dds_gain_control/data_i2
+   Register : dds_gain_control/data_i1
+   Register : dds_gain_control/data_temp__i12
+   Register : dds_gain_control/data_temp__i22
+   Register : dds_gain_control/data_temp__i11
+   Register : dds_gain_control/data_temp__i21
+   Register : dds_gain_control/data_temp__i20
+   Register : dds_gain_control/data_temp__i19
+
+                                   Page 12
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+GSR Usage (cont)
+----------------
+   Register : dds_gain_control/state__i2
+   Register : dds_gain_control/state__i1
+   Register : dds_gain_control/data_temp__i10
+   Register : dds_gain_control/data_temp__i18
+   Register : dds_gain_control/data_temp__i17
+   Register : dds_gain_control/data_temp__i16
+   Register : dds_gain_control/data_temp__i9
+   Register : reset_generator/in_d1_20
+   Register : reset_generator/in_d2_21
+   Register : reset_generator/in_d3_22
+   Register : reset_generator/clk_d2_19
+   Register : reset_generator/out_n_23
+   Register : dds_control_interface/count_7__I_84_i1
+   Register : dds_control_interface/data_i0_i0
+   Register : dds_control_interface/mosi_I_0
+   Register : dds_control_interface/data_valid_324
+   Register : dds_control_interface/count_7__I_84_i2
+   Register : dds_control_interface/count_7__I_84_i3
+   Register : dds_control_interface/count_7__I_84_i4
+   Register : dds_control_interface/count_7__I_84_i5
+   Register : dds_control_interface/count_7__I_84_i6
+   Register : dds_control_interface/count_7__I_84_i7
+   Register : dds_control_interface/count_7__I_84_i8
+   Register : dds_control_interface/state_3__I_0_332_i2
+   Register : dds_control_interface/state_3__I_0_332_i3
+   Register : dds_control_interface/data_temp_15__I_0_i2
+   Register : dds_control_interface/data_temp_15__I_0_i3
+   Register : dds_control_interface/data_temp_15__I_0_i4
+   Register : dds_control_interface/data_temp_15__I_0_i5
+   Register : dds_control_interface/data_temp_15__I_0_i6
+   Register : dds_control_interface/data_temp_15__I_0_i7
+   Register : dds_control_interface/data_temp_15__I_0_i8
+   Register : dds_control_interface/data_temp_15__I_0_i9
+   Register : dds_control_interface/data_temp_15__I_0_i10
+   Register : dds_control_interface/data_temp_15__I_0_i11
+   Register : dds_control_interface/data_temp_15__I_0_i12
+   Register : dds_control_interface/data_temp_15__I_0_i13
+   Register : dds_control_interface/data_temp_15__I_0_i14
+   Register : dds_control_interface/data_temp_15__I_0_i15
+   Register : dds_control_interface/data_temp_15__I_0_i16
+   Register : dds_control_interface/index_1537_1538__i1
+   Register : dds_control_interface/test_run_325
+   Register : dds_control_interface/data_i0_i15
+   Register : dds_control_interface/data_i0_i14
+   Register : dds_control_interface/data_i0_i13
+   Register : dds_control_interface/test_mode_d_326
+   Register : dds_control_interface/data_i0_i12
+   Register : dds_control_interface/data_i0_i11
+   Register : dds_control_interface/data_i0_i10
+   Register : dds_control_interface/data_i0_i9
+   Register : dds_control_interface/data_i0_i8
+   Register : dds_control_interface/data_i0_i7
+   Register : dds_control_interface/data_i0_i6
+   Register : dds_control_interface/data_i0_i5
+   Register : dds_control_interface/data_i0_i4
+   Register : dds_control_interface/data_i0_i3
+
+                                   Page 13
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+GSR Usage (cont)
+----------------
+   Register : dds_control_interface/data_i0_i2
+   Register : dds_control_interface/data_i0_i1
+   Register : dds_control_interface/transfer_done_328
+   Register : dds_control_interface/index_1537_1538__i2
+   Register : dds_control_interface/index_1537_1538__i3
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'reset_n' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 72 
+
+     Type and instance name of component: 
+   Register : i2c_slave_top/registers/data_out_i1
+   Register : i2c_slave_top/registers/data_out_i2
+   Register : i2c_slave_top/registers/data_out_i3
+   Register : i2c_slave_top/registers/data_out_i4
+   Register : i2c_slave_top/registers/data_out_i5
+   Register : i2c_slave_top/registers/data_out_i6
+   Register : i2c_slave_top/registers/data_out_i7
+   Register : i2c_slave_top/registers/count_1541__i0
+   Register : i2c_slave_top/registers/count_1541__i3
+   Register : i2c_slave_top/registers/count_1541__i2
+   Register : i2c_slave_top/registers/count_1541__i1
+   Register : i2c_slave_top/registers/data_out_i0
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i7
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i6
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i5
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i4
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i3
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i2
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i1
+   Register :
+        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_i__i0
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/read_
+        ack_i_769
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/write
+        _ack_i_770
+   Register : i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/wr_do
+        ne_i_787
+   Register : dds_gain_control/cstate__i0
+   Register : dds_gain_control/dac_count_1536__i15
+   Register : dds_gain_control/dac_count_1536__i14
+   Register : dds_gain_control/dac_count_1536__i13
+
+                                   Page 14
+
+
+
+
+Design:  top                                           Date:  04/08/25  23:20:39
+
+GSR Usage (cont)
+----------------
+   Register : dds_gain_control/dac_count_1536__i12
+   Register : dds_gain_control/dac_count_1536__i11
+   Register : dds_gain_control/dac_count_1536__i10
+   Register : dds_gain_control/dac_count_1536__i9
+   Register : dds_gain_control/dac_count_1536__i8
+   Register : dds_gain_control/dac_count_1536__i7
+   Register : dds_gain_control/dac_count_1536__i6
+   Register : dds_gain_control/dac_count_1536__i5
+   Register : dds_gain_control/dac_count_1536__i4
+   Register : dds_gain_control/dac_count_1536__i3
+   Register : dds_gain_control/dac_count_1536__i2
+   Register : dds_gain_control/dac_count_1536__i1
+   Register : dds_gain_control/dac_state__i2
+   Register : dds_gain_control/dac_count_1536__i0
+   Register : dds_gain_control/cstate__i1
+   Register : dds_gain_control/cstate__i2
+   Register : dds_gain_control/dac_state__i1
+   Register : adc_control/convert_count_1540__i0
+   Register : adc_control/sck_count_1539__i0
+   Register : adc_control/capture_state_i2
+   Register : adc_control/capture_state_i3
+   Register : adc_control/count_i1
+   Register : adc_control/count_i2
+   Register : adc_control/count_i3
+   Register : adc_control/convert_count_1540__i7
+   Register : adc_control/convert_count_1540__i6
+   Register : adc_control/convert_count_1540__i5
+   Register : adc_control/count_i4
+   Register : adc_control/count_i5
+   Register : adc_control/count_i6
+   Register : adc_control/convert_count_1540__i4
+   Register : adc_control/convert_count_1540__i3
+   Register : adc_control/convert_count_1540__i2
+   Register : adc_control/convert_count_1540__i1
+   Register : adc_control/sck_count_1539__i3
+   Register : adc_control/sck_count_1539__i2
+   Register : adc_control/sck_count_1539__i1
+   Register : adc_control/count_i7
+   Register : adc_control/count_i0
+   Register : dds_control_interface/ss0_temp2_279
+   Register : dds_control_interface/mosi_reset_287
+   Register : dds_control_interface/cstate__i0
+   Register : dds_control_interface/cstate__i1
+   Register : dds_control_interface/cstate__i2
+   Register : dds_control_interface/data_valid_reset_291
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 53 MB
+        
+
+
+
+
+                                   Page 15
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

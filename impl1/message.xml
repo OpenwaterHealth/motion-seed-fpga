@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="LSE_Compile">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901328</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(2): </Dynamic>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/tb_defines.v</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(4): </Dynamic>
+            <Dynamic>i2c_slave_top_tb</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>35901220</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(151): </Dynamic>
+            <Dynamic>rst</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>151</Navigation>
+        </Message>
+        <Message>
+            <ID>35901063</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(91): </Dynamic>
+            <Dynamic>i2c_master</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>91</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller_top.v(53): </Dynamic>
+            <Dynamic>i2cslave_controller_top</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller_top.v</Navigation>
+            <Navigation>53</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/filter.v(39): </Dynamic>
+            <Dynamic>filter</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/filter.v</Navigation>
+            <Navigation>39</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(54): </Dynamic>
+            <Dynamic>i2cslave_controller</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(408): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>408</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(433): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>433</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(454): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>454</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(495): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>495</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(545): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>545</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v(582): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller.v</Navigation>
+            <Navigation>582</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller_top.v(180): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/i2cslave_controller_top.v</Navigation>
+            <Navigation>180</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v(3): </Dynamic>
+            <Dynamic>registers</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v(189): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v</Navigation>
+            <Navigation>189</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v(194): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v</Navigation>
+            <Navigation>194</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v(211): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>12</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v</Navigation>
+            <Navigation>211</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v(236): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/src/registers.v</Navigation>
+            <Navigation>236</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(125): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>adc_data_value</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>125</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(126): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>monitor_status</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>126</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(127): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>status</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>127</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(133): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>dds_mon_current_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>133</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(134): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>cw_mon_current_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>134</Navigation>
+        </Message>
+        <Message>
+            <ID>35901167</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(164): </Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>164</Navigation>
+        </Message>
+        <Message>
+            <ID>35901167</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(168): </Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>168</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(170): </Dynamic>
+            <Dynamic>data_out</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>170</Navigation>
+        </Message>
+        <Message>
+            <ID>35901466</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(172): </Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>172</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(208): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>208</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(213): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>9</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>213</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(230): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>12</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>230</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(255): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>255</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(494): </Dynamic>
+            <Dynamic>GSR</Dynamic>
+            <Navigation>C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>494</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1032): </Dynamic>
+            <Dynamic>PUR</Dynamic>
+            <Navigation>C:/lscc/diamond/3.13/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1032</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(125): </Dynamic>
+            <Dynamic>adc_data_value</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>125</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(126): </Dynamic>
+            <Dynamic>monitor_status</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>126</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v(127): </Dynamic>
+            <Dynamic>status</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed driver/rev_0/testbench/top_tb.v</Navigation>
+            <Navigation>127</Navigation>
+        </Message>
+        <Message>
+            <ID>35001782</ID>
+            <Severity>Error</Severity>
+            <Dynamic>i2c_slave_top_tb</Dynamic>
+        </Message>
+    </Task>
+    <Task name="MapVerilogSimFile">
+        <Message>
+            <ID>35400250</ID>
+            <Severity>Info</Severity>
+            <Dynamic>0</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901328</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/testbench/top_tb.v(2): </Dynamic>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/testbench/tb_defines.v</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/testbench/top_tb.v</Navigation>
+            <Navigation>2</Navigation>
+        </Message>
+        <Message>
+            <ID>35901328</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/testbench/i2c_master.v(51): </Dynamic>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/testbench/tb_defines.v</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/testbench/i2c_master.v</Navigation>
+            <Navigation>51</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(20): </Dynamic>
+            <Dynamic>top</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/reset_generator.v(21): </Dynamic>
+            <Dynamic>reset_generator</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/reset_generator.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/heart_beat.v(21): </Dynamic>
+            <Dynamic>heart_beat</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/heart_beat.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/heart_beat.v(40): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/heart_beat.v</Navigation>
+            <Navigation>40</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/heart_beat.v(49): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/heart_beat.v</Navigation>
+            <Navigation>49</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2c_slave_top.v(20): </Dynamic>
+            <Dynamic>i2c_slave_top</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2c_slave_top.v</Navigation>
+            <Navigation>20</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller_top.v(53): </Dynamic>
+            <Dynamic>i2cslave_controller_top</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller_top.v</Navigation>
+            <Navigation>53</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/filter.v(39): </Dynamic>
+            <Dynamic>filter</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/filter.v</Navigation>
+            <Navigation>39</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(54): </Dynamic>
+            <Dynamic>i2cslave_controller</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>54</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(408): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>408</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(433): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>433</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(454): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>454</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(495): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>495</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(545): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>545</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(582): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>582</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller_top.v(180): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller_top.v</Navigation>
+            <Navigation>180</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v(3): </Dynamic>
+            <Dynamic>registers</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v(88): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v</Navigation>
+            <Navigation>88</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v(212): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v</Navigation>
+            <Navigation>212</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v(217): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v</Navigation>
+            <Navigation>217</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v(234): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>12</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v</Navigation>
+            <Navigation>234</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v(259): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/registers.v</Navigation>
+            <Navigation>259</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(184): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>monitor_status</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>184</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(191): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>dds_mon_current_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>191</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(192): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>cw_mon_current_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>192</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(3): </Dynamic>
+            <Dynamic>dds_gain_control</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(124): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>124</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(162): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>162</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(190): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>190</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(199): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>199</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(3): </Dynamic>
+            <Dynamic>dds_control_interface</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>3</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(124): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>124</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(151): </Dynamic>
+            <Dynamic>state</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>151</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(153): </Dynamic>
+            <Dynamic>ss0_temp</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>153</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(154): </Dynamic>
+            <Dynamic>count</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>154</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(154): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>154</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(155): </Dynamic>
+            <Dynamic>data</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>155</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(156): </Dynamic>
+            <Dynamic>data</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>156</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(161): </Dynamic>
+            <Dynamic>data_temp</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>161</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(162): </Dynamic>
+            <Dynamic>data_temp</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>162</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(163): </Dynamic>
+            <Dynamic>count</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>163</Navigation>
+        </Message>
+        <Message>
+            <ID>35901221</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(166): </Dynamic>
+            <Dynamic>count</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>166</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(166): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>166</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(190): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>190</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v(21): </Dynamic>
+            <Dynamic>adc_control</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v(133): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v</Navigation>
+            <Navigation>133</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v(146): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>4</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v</Navigation>
+            <Navigation>146</Navigation>
+        </Message>
+        <Message>
+            <ID>35901209</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v(174): </Dynamic>
+            <Dynamic>32</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/adc_control.v</Navigation>
+            <Navigation>174</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(241): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>dds_mon_current_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>241</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(242): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>16</Dynamic>
+            <Dynamic>cw_mon_current_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>242</Navigation>
+        </Message>
+        <Message>
+            <ID>35901330</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(252): </Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>8</Dynamic>
+            <Dynamic>monitor_status</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>252</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(76): </Dynamic>
+            <Dynamic>status[0]</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>76</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(97): </Dynamic>
+            <Dynamic>update_mon_limit</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>97</Navigation>
+        </Message>
+        <Message>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v(244): </Dynamic>
+            <Dynamic>adc_status_clear</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/top.v</Navigation>
+            <Navigation>244</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(313): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_10bit_en_reg_i_754</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>313</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(323): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/hs_mode_reg_i_755</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>323</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(735): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/addr_ack2_i_773</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>735</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(745): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/master_code_not_ack_reg_i_776</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>745</Navigation>
+        </Message>
+        <Message>
+            <ID>35001774</ID>
+            <Severity>Info</Severity>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i</Dynamic>
+            <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>7</Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_FSM</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_FSM</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001747</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>3</Dynamic>
+            <Dynamic>\dds_gain_control/dac_state</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(618): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_FSM_i3</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>618</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(231): </Dynamic>
+            <Dynamic>\dds_gain_control/data_i23</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>231</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(170): </Dynamic>
+            <Dynamic>\dds_gain_control/data_temp__i0</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>170</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(1087): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/timeout_state_i__i1</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>1087</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v(138): </Dynamic>
+            <Dynamic>\dds_gain_control/cstate__i3</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_gain_control.v</Navigation>
+            <Navigation>138</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v(141): </Dynamic>
+            <Dynamic>\dds_control_interface/cstate__i3</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/dds_control_interface.v</Navigation>
+            <Navigation>141</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(1074): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/timeout_counter_i_1543__i0</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>1074</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v(1097): </Dynamic>
+            <Dynamic>\i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/reset_fsm_i_804</Dynamic>
+            <Navigation>c:/project/working/fpga/home/lattice/seed_driver/rev_5/src/i2cslave_controller.v</Navigation>
+            <Navigation>1097</Navigation>
+        </Message>
+        <Message>
+            <ID>35001752</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\dds_control_interface/state_3__I_0_332_i1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001752</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>\dds_control_interface/data_temp_15__I_0_i1</Dynamic>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61001101</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>clk_10mhz_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>clk_10mhz</Dynamic>
+            <Dynamic>1</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=i2c_slave_top/addr_i_7__N_595 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_591 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_592 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_593 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_594 loads=2 clock_loads=1
+   Signal=i2c_   ....   _d2 loads=4 clock_loads=3
+   Signal=dds_control_interface/count_7__N_1284 loads=4 clock_loads=4
+   Signal=dds_control_interface/state_3__N_1257 loads=1 clock_loads=1</Dynamic>
+        </Message>
+        <Message>
+            <ID>66011008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>
+   Signal=i2c_slave_top/addr_i_7__N_595 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_591 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_592 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_593 loads=2 clock_loads=1
+   Signal=i2c_slave_top/addr_i_7__N_594 loads=2 clock_loads=1
+   Signal=i2c_   ....   _d2 loads=4 clock_loads=3
+   Signal=dds_control_interface/count_7__N_1284 loads=4 clock_loads=4
+   Signal=dds_control_interface/state_3__N_1257 loads=1 clock_loads=1</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION *NOT* controlled by xo2c00.acd ###</Dynamic>
+        </Message>
+        <Message>
+            <ID>1009992</ID>
+            <Severity>Info</Severity>
+            <Dynamic> SW_XO3D_SECURITY_ENCRYPTION license_securityIP OK</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

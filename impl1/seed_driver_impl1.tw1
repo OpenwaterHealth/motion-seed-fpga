@@ -1,0 +1,2234 @@
+
+Loading design for application trce from file seed_driver_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-2000HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c2000.nph' in environment: C:/lscc/diamond/3.13/ispfpga.
+Package Status:                     Final          Version 1.44.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.13.0.56.2
+Tue Apr 08 23:20:40 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o seed_driver_impl1.tw1 -gui -msgset C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/promote.xml seed_driver_impl1_map.ncd seed_driver_impl1.prf 
+Design file:     seed_driver_impl1_map.ncd
+Preference file: seed_driver_impl1.prf
+Device,speed:    LCMXO2-2000HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+9 potential circuit loops found in timing analysis.
+9 potential circuit loops found in timing analysis.
+9 potential circuit loops found in timing analysis.
+Report Type:     based on TRACE automatically generated preferences
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;
+            365 items scored, 253 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.132ns (weighted slack = -862.555ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        dds_gain_control/state__i2  (to seed_spare1_c +)
+                   FF                        dds_gain_control/state__i1
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay SLICE_575 to dds_gain_control/SLICE_298 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.340ns)
+      0.016ns delay constraint less
+      0.733ns LSR_SET requirement (totaling -0.717ns) by 4.132ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to dds_gain_control/SLICE_298:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_679.A0 reset_n
+CTOF_DEL    ---     0.495 */SLICE_679.A0 to */SLICE_679.F0 dds_gain_control/SLICE_679
+ROUTE        36   e 1.234 */SLICE_679.F0 to *SLICE_298.LSR dds_gain_control/state_3__N_882 (to seed_spare1_c)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning:   1.155MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;
+            4096 items scored, 4096 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.643ns (weighted slack = -1069.331ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        dds_control_interface/index_1537_1538__i2  (to clk_10mhz_c +)
+                   FF                        dds_control_interface/index_1537_1538__i1
+
+   Delay:               4.390ns  (32.8% logic, 67.2% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.390ns physical path delay SLICE_575 to dds_control_interface/SLICE_186 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 6.679ns)
+      0.029ns delay constraint less
+      0.282ns CE_SET requirement (totaling -0.253ns) by 4.643ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to dds_control_interface/SLICE_186:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_580.A1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_580.A1 to */SLICE_580.F1 dds_control_interface/SLICE_580
+ROUTE        11   e 0.480 */SLICE_580.F1 to */SLICE_580.C0 dds_control_interface/n12627
+CTOF_DEL    ---     0.495 */SLICE_580.C0 to */SLICE_580.F0 dds_control_interface/SLICE_580
+ROUTE         2   e 1.234 */SLICE_580.F0 to */SLICE_186.CE dds_control_interface/clk_10mhz_c_enable_230 (to clk_10mhz_c)
+                  --------
+                    4.390   (32.8% logic, 67.2% route), 3 logic levels.
+
+Warning:   0.929MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;
+            576 items scored, 413 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 8.420ns (weighted slack = -106.184ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/registers/i3478  (from i2c_slave_top/addr_i_7__N_596 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/addr_i_reg_i7_3507_3508_reset  (to i2c_slave_top/registers/data_vld_dly +)
+
+   Delay:               8.568ns  (42.3% logic, 57.7% route), 8 logic levels.
+
+ Constraint Details:
+
+      8.568ns physical path delay i2c_slave_top/registers/SLICE_394 to i2c_slave_top/registers/SLICE_610 exceeds
+      (delay constraint based on source clock period of 3.266ns and destination clock period of 6.255ns)
+      0.496ns delay constraint less
+      0.348ns M_SET requirement (totaling 0.148ns) by 8.420ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/registers/SLICE_394 to i2c_slave_top/registers/SLICE_610:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_394.CLK to */SLICE_394.Q0 i2c_slave_top/registers/SLICE_394 (from i2c_slave_top/addr_i_7__N_596)
+ROUTE         3   e 1.234 */SLICE_394.Q0 to */SLICE_497.C1 i2c_slave_top/registers/n6121
+CTOF_DEL    ---     0.495 */SLICE_497.C1 to */SLICE_497.F1 i2c_slave_top/registers/SLICE_497
+ROUTE        69   e 1.234 */SLICE_497.F1 to *rs/SLICE_3.A1 i2c_slave_top/n12641
+C1TOFCO_DE  ---     0.889 *rs/SLICE_3.A1 to *s/SLICE_3.FCO i2c_slave_top/registers/SLICE_3
+ROUTE         1   e 0.001 *s/SLICE_3.FCO to *s/SLICE_2.FCI i2c_slave_top/registers/n9620
+FCITOFCO_D  ---     0.162 *s/SLICE_2.FCI to *s/SLICE_2.FCO i2c_slave_top/registers/SLICE_2
+ROUTE         1   e 0.001 *s/SLICE_2.FCO to *s/SLICE_1.FCI i2c_slave_top/registers/n9621
+FCITOFCO_D  ---     0.162 *s/SLICE_1.FCI to *s/SLICE_1.FCO i2c_slave_top/registers/SLICE_1
+ROUTE         1   e 0.001 *s/SLICE_1.FCO to *s/SLICE_0.FCI i2c_slave_top/registers/n9622
+FCITOFCO_D  ---     0.162 *s/SLICE_0.FCI to *s/SLICE_0.FCO i2c_slave_top/registers/SLICE_0
+ROUTE         1   e 0.001 *s/SLICE_0.FCO to *s/SLICE_4.FCI i2c_slave_top/registers/n9623
+FCITOF0_DE  ---     0.585 *s/SLICE_4.FCI to *rs/SLICE_4.F0 i2c_slave_top/registers/SLICE_4
+ROUTE         1   e 1.234 *rs/SLICE_4.F0 to */SLICE_416.A1 i2c_slave_top/registers/addr_i_7_N_841_7
+CTOOFX_DEL  ---     0.721 */SLICE_416.A1 to *LICE_416.OFX0 i2c_slave_top/registers/SLICE_416
+ROUTE         2   e 1.234 *LICE_416.OFX0 to */SLICE_610.M0 i2c_slave_top/registers/n5834 (to i2c_slave_top/registers/data_vld_dly)
+                  --------
+                    8.568   (42.3% logic, 57.7% route), 8 logic levels.
+
+Warning:   8.894MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3482  (to i2c_slave_top/addr_i_7__N_595 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to SLICE_397 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to SLICE_397:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_589.D0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_589.D0 to */SLICE_589.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589
+ROUTE         2   e 1.234 */SLICE_589.F0 to  SLICE_397.LSR i2c_slave_top/addr_i_7__N_625 (to i2c_slave_top/addr_i_7__N_595)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3498  (to i2c_slave_top/addr_i_7__N_591 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_409 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_409:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_585.D0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_585.D0 to */SLICE_585.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585
+ROUTE         2   e 1.234 */SLICE_585.F0 to *SLICE_409.LSR i2c_slave_top/addr_i_7__N_613 (to i2c_slave_top/addr_i_7__N_591)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3494  (to i2c_slave_top/addr_i_7__N_592 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_406 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_406:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_590.D0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_590.D0 to */SLICE_590.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590
+ROUTE         2   e 1.234 */SLICE_590.F0 to *SLICE_406.LSR i2c_slave_top/addr_i_7__N_616 (to i2c_slave_top/addr_i_7__N_592)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3490  (to i2c_slave_top/addr_i_7__N_593 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_403 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_403:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_591.D0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_591.D0 to */SLICE_591.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591
+ROUTE         2   e 1.234 */SLICE_591.F0 to *SLICE_403.LSR i2c_slave_top/addr_i_7__N_619 (to i2c_slave_top/addr_i_7__N_593)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3486  (to i2c_slave_top/addr_i_7__N_594 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_400 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_400:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_584.D0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_584.D0 to */SLICE_584.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584
+ROUTE         2   e 1.234 */SLICE_584.F0 to *SLICE_400.LSR i2c_slave_top/addr_i_7__N_622 (to i2c_slave_top/addr_i_7__N_594)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3502  (to i2c_slave_top/addr_i_7__N_590 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_412 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_412:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_586.D1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_586.D1 to */SLICE_586.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586
+ROUTE         2   e 1.234 */SLICE_586.F1 to *SLICE_412.LSR i2c_slave_top/addr_i_7__N_610 (to i2c_slave_top/addr_i_7__N_590)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3506  (to i2c_slave_top/addr_i_7__N_587 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_415 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_415:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_587.D1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_587.D1 to */SLICE_587.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587
+ROUTE         2   e 1.234 */SLICE_587.F1 to *SLICE_415.LSR i2c_slave_top/addr_i_7__N_597 (to i2c_slave_top/addr_i_7__N_587)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 5.730ns (weighted slack = -127.307ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3478  (to i2c_slave_top/addr_i_7__N_596 +)
+
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.144ns physical path delay SLICE_575 to i2c_slave_top/registers/SLICE_394 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 5.730ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/registers/SLICE_394:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_588.D0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_588.D0 to */SLICE_588.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588
+ROUTE         2   e 1.234 */SLICE_588.F0 to *SLICE_394.LSR i2c_slave_top/addr_i_7__N_628 (to i2c_slave_top/addr_i_7__N_596)
+                  --------
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
+
+Warning:   7.658MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;
+            6 items scored, 6 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.001ns (weighted slack = -88.893ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/stop_detect_i_752  (to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg +)
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay SLICE_575 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_662 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.147ns delay constraint less
+      0.733ns LSRREC_SET requirement (totaling -0.586ns) by 4.001ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_662:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_671.A0 reset_n
+CTOF_DEL    ---     0.495 */SLICE_671.A0 to */SLICE_671.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_671
+ROUTE         2   e 1.234 */SLICE_671.F0 to *SLICE_662.LSR i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect_i_N_340 (to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning:  10.851MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;
+            1578 items scored, 723 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 10.524ns (weighted slack = -1193.469ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/data_buffer_i_i0_i1  (to i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n +)
+
+   Delay:              10.331ns  (28.3% logic, 71.7% route), 6 logic levels.
+
+ Constraint Details:
+
+     10.331ns physical path delay SLICE_575 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_311 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 10.093ns)
+      0.089ns delay constraint less
+      0.282ns CE_SET requirement (totaling -0.193ns) by 10.524ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_311:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_489.B1 reset_n
+CTOF_DEL    ---     0.495 */SLICE_489.B1 to */SLICE_489.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_489
+ROUTE        29   e 1.234 */SLICE_489.F1 to */SLICE_619.A1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/next_state_i_3__N_78
+CTOF_DEL    ---     0.495 */SLICE_619.A1 to */SLICE_619.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_619
+ROUTE         1   e 1.234 */SLICE_619.F1 to */SLICE_526.C1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n12575
+CTOF_DEL    ---     0.495 */SLICE_526.C1 to */SLICE_526.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_526
+ROUTE         2   e 1.234 */SLICE_526.F1 to */SLICE_548.A1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n5125
+CTOF_DEL    ---     0.495 */SLICE_548.A1 to */SLICE_548.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_548
+ROUTE         5   e 1.234 */SLICE_548.F1 to */SLICE_616.C1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n9759
+CTOF_DEL    ---     0.495 */SLICE_616.C1 to */SLICE_616.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_616
+ROUTE         1   e 1.234 */SLICE_616.F1 to */SLICE_311.CE i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/out_n_enable_3 (to i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n)
+                  --------
+                   10.331   (28.3% logic, 71.7% route), 6 logic levels.
+
+Warning:   0.831MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "reset_generator/clk_d2" 399.840000 MHz ;
+            5 items scored, 2 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 1.196ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/in_d2_21  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        reset_generator/out_n_23  (to reset_generator/clk_d2 +)
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay reset_generator/SLICE_430 to SLICE_575 exceeds
+      2.501ns delay constraint less
+      0.282ns CE_SET requirement (totaling 2.219ns) by 1.196ns
+
+ Physical Path Details:
+
+      Data path reset_generator/SLICE_430 to SLICE_575:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_430.CLK to */SLICE_430.Q1 reset_generator/SLICE_430 (from reset_generator/clk_d2)
+ROUTE         2   e 1.234 */SLICE_430.Q1 to */SLICE_681.A0 reset_generator/in_d2
+CTOF_DEL    ---     0.495 */SLICE_681.A0 to */SLICE_681.F0 reset_generator/SLICE_681
+ROUTE         1   e 1.234 */SLICE_681.F0 to   SLICE_575.CE reset_generator/reset_n_N_4 (to reset_generator/clk_d2)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning: 270.490MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "adc_control/adc_sck_temp" 268.168000 MHz ;
+            486 items scored, 272 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 3.757ns (weighted slack = -84.397ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              adc_control/data_ready_133  (from clk_10mhz_c +)
+   Destination:    FF         Data in        adc_control/capture_state_i1  (to adc_control/adc_sck_temp +)
+                   FF                        adc_control/capture_state_i0
+
+   Delay:               3.641ns  (32.2% logic, 67.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.641ns physical path delay adc_control/SLICE_101 to adc_control/SLICE_85 exceeds
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.729ns)
+      0.166ns delay constraint less
+      0.282ns CE_SET requirement (totaling -0.116ns) by 3.757ns
+
+ Physical Path Details:
+
+      Data path adc_control/SLICE_101 to adc_control/SLICE_85:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_101.CLK to */SLICE_101.Q0 adc_control/SLICE_101 (from clk_10mhz_c)
+ROUTE         2   e 1.234 */SLICE_101.Q0 to */SLICE_485.D0 adc_control/data_ready
+CTOOFX_DEL  ---     0.721 */SLICE_485.D0 to *LICE_485.OFX0 adc_control/i9689/SLICE_485
+ROUTE         2   e 1.234 *LICE_485.OFX0 to *l/SLICE_85.CE adc_control/adc_sck_temp_enable_64 (to adc_control/adc_sck_temp)
+                  --------
+                    3.641   (32.2% logic, 67.8% route), 2 logic levels.
+
+Warning:  11.347MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;
+            68 items scored, 68 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 4.132ns (weighted slack = -862.555ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        dds_control_interface/count_7__I_84_i2  (to dds_control_interface/count_7__N_1284 +)
+                   FF                        dds_control_interface/count_7__I_84_i1
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay SLICE_575 to dds_control_interface/SLICE_161 exceeds
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.340ns)
+      0.016ns delay constraint less
+      0.733ns LSR_SET requirement (totaling -0.717ns) by 4.132ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to dds_control_interface/SLICE_161:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 1.234   SLICE_575.Q0 to */SLICE_685.A0 reset_n
+CTOF_DEL    ---     0.495 */SLICE_685.A0 to */SLICE_685.F0 dds_control_interface/SLICE_685
+ROUTE        14   e 1.234 */SLICE_685.F0 to *SLICE_161.LSR dds_control_interface/state_3__N_1254 (to dds_control_interface/count_7__N_1284)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning:   1.155MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;
+            81 items scored, 34 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 3.324ns (weighted slack = -10.089ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              dds_control_interface/mosi_reset_287  (from clk_10mhz_c +)
+   Destination:    FF         Data in        dds_control_interface/data_temp_15__I_0_i15  (to dds_control_interface/data_temp_15__N_1301 +)
+                   FF                        dds_control_interface/data_temp_15__I_0_i14
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay dds_control_interface/SLICE_188 to dds_control_interface/SLICE_182 exceeds
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 2.501ns)
+      0.824ns delay constraint less
+      0.733ns LSR_SET requirement (totaling 0.091ns) by 3.324ns
+
+ Physical Path Details:
+
+      Data path dds_control_interface/SLICE_188 to dds_control_interface/SLICE_182:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_188.CLK to */SLICE_188.Q0 dds_control_interface/SLICE_188 (from clk_10mhz_c)
+ROUTE         1   e 1.234 */SLICE_188.Q0 to */SLICE_685.B0 dds_control_interface/mosi_reset
+CTOF_DEL    ---     0.495 */SLICE_685.B0 to */SLICE_685.F0 dds_control_interface/SLICE_685
+ROUTE        14   e 1.234 */SLICE_685.F0 to *SLICE_182.LSR dds_control_interface/state_3__N_1254 (to dds_control_interface/data_temp_15__N_1301)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning:  79.434MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;
+            5 items scored, 2 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error: The following path exceeds requirements by 3.324ns (weighted slack = -10.089ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              dds_control_interface/mosi_reset_287  (from clk_10mhz_c +)
+   Destination:    FF         Data in        dds_control_interface/state_3__I_0_332_i3  (to dds_control_interface/state_3__N_1257 +)
+                   FF                        dds_control_interface/state_3__I_0_332_i2
+
+   Delay:               3.415ns  (27.7% logic, 72.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.415ns physical path delay dds_control_interface/SLICE_188 to dds_control_interface/SLICE_195 exceeds
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 2.501ns)
+      0.824ns delay constraint less
+      0.733ns LSR_SET requirement (totaling 0.091ns) by 3.324ns
+
+ Physical Path Details:
+
+      Data path dds_control_interface/SLICE_188 to dds_control_interface/SLICE_195:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 *SLICE_188.CLK to */SLICE_188.Q0 dds_control_interface/SLICE_188 (from clk_10mhz_c)
+ROUTE         1   e 1.234 */SLICE_188.Q0 to */SLICE_685.B0 dds_control_interface/mosi_reset
+CTOF_DEL    ---     0.495 */SLICE_685.B0 to */SLICE_685.F0 dds_control_interface/SLICE_685
+ROUTE        14   e 1.234 */SLICE_685.F0 to *SLICE_195.LSR dds_control_interface/state_3__N_1254 (to dds_control_interface/state_3__N_1257)
+                  --------
+                    3.415   (27.7% logic, 72.3% route), 2 logic levels.
+
+Warning:  79.434MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "heart_beat/prescale[15]" 240.442000 MHz ;
+            36 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.096ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              heart_beat/count_1534_1701__i0  (from heart_beat/prescale[15] +)
+   Destination:    FF         Data in        heart_beat/count_1534_1701__i7  (to heart_beat/prescale[15] +)
+
+   Delay:               2.897ns  (83.3% logic, 16.7% route), 6 logic levels.
+
+ Constraint Details:
+
+      2.897ns physical path delay heart_beat/SLICE_83 to heart_beat/SLICE_79 meets
+      4.159ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 3.993ns) by 1.096ns
+
+ Physical Path Details:
+
+      Data path heart_beat/SLICE_83 to heart_beat/SLICE_79:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 */SLICE_83.CLK to *t/SLICE_83.Q1 heart_beat/SLICE_83 (from heart_beat/prescale[15])
+ROUTE         1   e 0.480 *t/SLICE_83.Q1 to *t/SLICE_83.A1 heart_beat/n8
+C1TOFCO_DE  ---     0.889 *t/SLICE_83.A1 to */SLICE_83.FCO heart_beat/SLICE_83
+ROUTE         1   e 0.001 */SLICE_83.FCO to */SLICE_82.FCI heart_beat/n9672
+FCITOFCO_D  ---     0.162 */SLICE_82.FCI to */SLICE_82.FCO heart_beat/SLICE_82
+ROUTE         1   e 0.001 */SLICE_82.FCO to */SLICE_81.FCI heart_beat/n9673
+FCITOFCO_D  ---     0.162 */SLICE_81.FCI to */SLICE_81.FCO heart_beat/SLICE_81
+ROUTE         1   e 0.001 */SLICE_81.FCO to */SLICE_80.FCI heart_beat/n9674
+FCITOFCO_D  ---     0.162 */SLICE_80.FCI to */SLICE_80.FCO heart_beat/SLICE_80
+ROUTE         1   e 0.001 */SLICE_80.FCO to */SLICE_79.FCI heart_beat/n9675
+FCITOF0_DE  ---     0.585 */SLICE_79.FCI to *t/SLICE_79.F0 heart_beat/SLICE_79
+ROUTE         1   e 0.001 *t/SLICE_79.F0 to */SLICE_79.DI0 heart_beat/n38 (to heart_beat/prescale[15])
+                  --------
+                    2.897   (83.3% logic, 16.7% route), 6 logic levels.
+
+Report:  326.477MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "seed_spare1_c"           |             |             |
+299.401000 MHz ;                        |  299.401 MHz|    1.155 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET "clk_10mhz_c" 149.723000  |             |             |
+MHz ;                                   |  149.723 MHz|    0.929 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/registers/data_vld_dly"  |             |             |
+159.872000 MHz ;                        |  159.872 MHz|    8.894 MHz|   8 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_595"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_591"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_592"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_593"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_594"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_590"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_587"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_596"         |             |             |
+306.185000 MHz ;                        |  306.185 MHz|    7.658 MHz|   3 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/i2cslave_controller_top/i|             |             |
+2cslave_controller_u1/sda_reg"          |             |             |
+306.185000 MHz ;                        |  306.185 MHz|   10.851 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/i2cslave_controller_top/f|             |             |
+ilter_scl_inst/out_n" 99.079000 MHz ;   |   99.079 MHz|    0.831 MHz|   6 *
+                                        |             |             |
+FREQUENCY NET "reset_generator/clk_d2"  |             |             |
+399.840000 MHz ;                        |  399.840 MHz|  270.490 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"adc_control/adc_sck_temp" 268.168000   |             |             |
+MHz ;                                   |  268.168 MHz|   11.347 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"dds_control_interface/count_7__N_1284" |             |             |
+299.401000 MHz ;                        |  299.401 MHz|    1.155 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"dds_control_interface/data_temp_15__N_1|             |             |
+301" 399.840000 MHz ;                   |  399.840 MHz|   79.434 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"dds_control_interface/state_3__N_1257" |             |             |
+399.840000 MHz ;                        |  399.840 MHz|   79.434 MHz|   2 *
+                                        |             |             |
+FREQUENCY NET "heart_beat/prescale[15]" |             |             |
+240.442000 MHz ;                        |  240.442 MHz|  326.477 MHz|   6  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+18 preferences(marked by "*" above) not met.
+
+----------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+----------------------------------------------------------------------------
+i2c_slave_top/registers/n6165           |       8|    1368|     23.12%
+                                        |        |        |
+i2c_slave_top/registers/n11910          |       1|    1128|     19.06%
+                                        |        |        |
+----------------------------------------------------------------------------
+
+
+Clock Domains Analysis
+------------------------
+
+Found 19 clocks:
+
+Clock Domain: seed_spare1_c   Source: dds_gain_control/SLICE_437.Q0   Loads: 29
+   Covered under: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;   Transfers: 21
+
+Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0   Loads: 4
+   Covered under: FREQUENCY NET "reset_generator/clk_d2" 399.840000 MHz ;
+
+Clock Domain: i2c_slave_top/registers/data_vld_dly   Source: i2c_slave_top/SLICE_384.Q0   Loads: 20
+   Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 9
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_596   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_595   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_594   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_593   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_592   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_591   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_590   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586.F0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_587   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587.F0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 13
+
+Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0   Loads: 12
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;   Transfers: 2
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;   Transfers: 2
+
+Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0   Loads: 25
+   Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;   Transfers: 2
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;   Transfers: 11
+
+Clock Domain: i2c_slave_top/addr_i_7__N_596   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_595   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_594   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_593   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_592   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_591   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_590   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586.F0   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_587   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587.F0   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: heart_beat/prescale[15]   Source: heart_beat/SLICE_70.Q0   Loads: 6
+   Covered under: FREQUENCY NET "heart_beat/prescale[15]" 240.442000 MHz ;
+
+Clock Domain: dds_control_interface/state_3__N_1257   Source: dds_control_interface/SLICE_574.F1   Loads: 1
+   Covered under: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;   Transfers: 1
+
+Clock Domain: dds_control_interface/data_temp_15__N_1301   Source: dds_control_interface/SLICE_603.F0   Loads: 9
+   Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;   Transfers: 1
+
+   Clock Domain: dds_control_interface/state_3__N_1257   Source: dds_control_interface/SLICE_574.F1
+      Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;   Transfers: 17
+
+Clock Domain: dds_control_interface/count_7__N_1284   Source: dds_control_interface/SLICE_603.F1   Loads: 4
+   Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;   Transfers: 1
+
+   Clock Domain: dds_control_interface/state_3__N_1257   Source: dds_control_interface/SLICE_574.F1
+      Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;   Transfers: 1
+
+Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD   Loads: 240
+   Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/registers/data_vld_dly   Source: i2c_slave_top/SLICE_384.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 18
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 2
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 28
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_596   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_595   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_594   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_593   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_592   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_591   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_590   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586.F0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_587   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587.F0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: adc_control/adc_sck_temp   Source: adc_control/SLICE_84.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 32
+
+Clock Domain: adc_control/adc_sck_temp   Source: adc_control/SLICE_84.Q0   Loads: 53
+   Covered under: FREQUENCY NET "adc_control/adc_sck_temp" 268.168000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "adc_control/adc_sck_temp" 268.168000 MHz ;   Transfers: 1
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 5917  Score: 1157047844
+Cumulative negative slack: 1156808263
+
+Constraints cover 13945 paths, 36 nets, and 4052 connections (95.70% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.13.0.56.2
+Tue Apr 08 23:20:40 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o seed_driver_impl1.tw1 -gui -msgset C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/promote.xml seed_driver_impl1_map.ncd seed_driver_impl1.prf 
+Design file:     seed_driver_impl1_map.ncd
+Preference file: seed_driver_impl1.prf
+Device,speed:    LCMXO2-2000HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+9 potential circuit loops found in timing analysis.
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;
+            365 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              dds_gain_control/data_temp__i22  (from seed_spare1_c +)
+   Destination:    FF         Data in        dds_gain_control/data_temp__i23  (to seed_spare1_c +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay dds_gain_control/SLICE_279 to dds_gain_control/SLICE_279 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path dds_gain_control/SLICE_279 to dds_gain_control/SLICE_279:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_279.CLK to */SLICE_279.Q0 dds_gain_control/SLICE_279 (from seed_spare1_c)
+ROUTE         1   e 0.199 */SLICE_279.Q0 to */SLICE_279.C1 dds_gain_control/data_temp_22
+CTOF_DEL    ---     0.101 */SLICE_279.C1 to */SLICE_279.F1 dds_gain_control/SLICE_279
+ROUTE         1   e 0.001 */SLICE_279.F1 to *SLICE_279.DI1 dds_gain_control/n10376 (to seed_spare1_c)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              adc_control/state_i2  (from clk_10mhz_c +)
+   Destination:    FF         Data in        adc_control/state_i2  (to clk_10mhz_c +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay adc_control/SLICE_443 to adc_control/SLICE_443 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path adc_control/SLICE_443 to adc_control/SLICE_443:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_443.CLK to */SLICE_443.Q0 adc_control/SLICE_443 (from clk_10mhz_c)
+ROUTE         5   e 0.199 */SLICE_443.Q0 to */SLICE_443.M0 state_2 (to clk_10mhz_c)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;
+            576 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/registers/byte_cnt_i0  (from i2c_slave_top/registers/data_vld_dly +)
+   Destination:    FF         Data in        i2c_slave_top/registers/byte_cnt_i0  (to i2c_slave_top/registers/data_vld_dly +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay i2c_slave_top/SLICE_363 to i2c_slave_top/SLICE_363 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/SLICE_363 to i2c_slave_top/SLICE_363:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_363.CLK to */SLICE_363.Q0 i2c_slave_top/SLICE_363 (from i2c_slave_top/registers/data_vld_dly)
+ROUTE        15   e 0.199 */SLICE_363.Q0 to */SLICE_363.C0 i2c_slave_top/registers/byte_cnt_0
+CTOF_DEL    ---     0.101 */SLICE_363.C0 to */SLICE_363.F0 i2c_slave_top/SLICE_363
+ROUTE         1   e 0.001 */SLICE_363.F0 to *SLICE_363.DI0 i2c_slave_top/registers/n12009 (to i2c_slave_top/registers/data_vld_dly)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3482  (to i2c_slave_top/addr_i_7__N_595 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to SLICE_397 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to SLICE_397:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_589.A0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_589.A0 to */SLICE_589.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589
+ROUTE         2   e 0.515 */SLICE_589.F0 to  SLICE_397.LSR i2c_slave_top/addr_i_7__N_625 (to i2c_slave_top/addr_i_7__N_595)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3498  (to i2c_slave_top/addr_i_7__N_591 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_409 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_409:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_585.A0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_585.A0 to */SLICE_585.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585
+ROUTE         2   e 0.515 */SLICE_585.F0 to *SLICE_409.LSR i2c_slave_top/addr_i_7__N_613 (to i2c_slave_top/addr_i_7__N_591)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3494  (to i2c_slave_top/addr_i_7__N_592 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_406 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_406:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_590.A0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_590.A0 to */SLICE_590.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590
+ROUTE         2   e 0.515 */SLICE_590.F0 to *SLICE_406.LSR i2c_slave_top/addr_i_7__N_616 (to i2c_slave_top/addr_i_7__N_592)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3490  (to i2c_slave_top/addr_i_7__N_593 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_403 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_403:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_591.A0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_591.A0 to */SLICE_591.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591
+ROUTE         2   e 0.515 */SLICE_591.F0 to *SLICE_403.LSR i2c_slave_top/addr_i_7__N_619 (to i2c_slave_top/addr_i_7__N_593)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3486  (to i2c_slave_top/addr_i_7__N_594 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_400 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_400:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_584.A0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_584.A0 to */SLICE_584.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584
+ROUTE         2   e 0.515 */SLICE_584.F0 to *SLICE_400.LSR i2c_slave_top/addr_i_7__N_622 (to i2c_slave_top/addr_i_7__N_594)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3502  (to i2c_slave_top/addr_i_7__N_590 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_412 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_412:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_586.A1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_586.A1 to */SLICE_586.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586
+ROUTE         2   e 0.515 */SLICE_586.F1 to *SLICE_412.LSR i2c_slave_top/addr_i_7__N_610 (to i2c_slave_top/addr_i_7__N_590)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3506  (to i2c_slave_top/addr_i_7__N_587 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_415 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_415:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_587.A1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_587.A1 to */SLICE_587.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587
+ROUTE         2   e 0.515 */SLICE_587.F1 to *SLICE_415.LSR i2c_slave_top/addr_i_7__N_597 (to i2c_slave_top/addr_i_7__N_587)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i_750  (from clk_10mhz_c +)
+   Destination:    FF         Data in        i2c_slave_top/registers/i3478  (to i2c_slave_top/addr_i_7__N_596 +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_394 meets
+      (delay constraint based on source clock period of 6.679ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 to i2c_slave_top/registers/SLICE_394:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_357.CLK to */SLICE_357.Q1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_357 (from clk_10mhz_c)
+ROUTE        19   e 0.515 */SLICE_357.Q1 to */SLICE_588.A0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect2_i
+CTOF_DEL    ---     0.101 */SLICE_588.A0 to */SLICE_588.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588
+ROUTE         2   e 0.515 */SLICE_588.F0 to *SLICE_394.LSR i2c_slave_top/addr_i_7__N_628 (to i2c_slave_top/addr_i_7__N_596)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;
+            6 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 1.264ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/out_n_23  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/stop_detect_i_752  (to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg +)
+
+   Delay:               1.264ns  (18.5% logic, 81.5% route), 2 logic levels.
+
+ Constraint Details:
+
+      1.264ns physical path delay SLICE_575 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_662 meets
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.266ns)
+      0.000ns LSRREC_HLD and
+      0.000ns delay constraint requirement (totaling 0.000ns) by 1.264ns
+
+ Physical Path Details:
+
+      Data path SLICE_575 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_662:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133  SLICE_575.CLK to   SLICE_575.Q0 SLICE_575 (from reset_generator/clk_d2)
+ROUTE        10   e 0.515   SLICE_575.Q0 to */SLICE_671.A0 reset_n
+CTOF_DEL    ---     0.101 */SLICE_671.A0 to */SLICE_671.F0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_671
+ROUTE         2   e 0.515 */SLICE_671.F0 to *SLICE_662.LSR i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/start_detect_i_N_340 (to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg)
+                  --------
+                    1.264   (18.5% logic, 81.5% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;
+            1578 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count_i_i0_i1  (from i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n +)
+   Destination:    FF         Data in        i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count_i_i0_i2  (to i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_335 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_335 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_335 to i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_335:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_335.CLK to */SLICE_335.Q0 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_335 (from i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n)
+ROUTE        24   e 0.199 */SLICE_335.Q0 to */SLICE_335.B1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/count_i_1
+CTOF_DEL    ---     0.101 */SLICE_335.B1 to */SLICE_335.F1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_335
+ROUTE         1   e 0.001 */SLICE_335.F1 to *SLICE_335.DI1 i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/n3433 (to i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "reset_generator/clk_d2" 399.840000 MHz ;
+            5 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              reset_generator/in_d1_20  (from reset_generator/clk_d2 +)
+   Destination:    FF         Data in        reset_generator/in_d2_21  (to reset_generator/clk_d2 +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay reset_generator/SLICE_430 to reset_generator/SLICE_430 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path reset_generator/SLICE_430 to reset_generator/SLICE_430:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_430.CLK to */SLICE_430.Q0 reset_generator/SLICE_430 (from reset_generator/clk_d2)
+ROUTE         1   e 0.199 */SLICE_430.Q0 to */SLICE_430.M1 reset_generator/in_d1 (to reset_generator/clk_d2)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "adc_control/adc_sck_temp" 268.168000 MHz ;
+            486 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              adc_control/count_i6  (from adc_control/adc_sck_temp +)
+   Destination:    FF         Data in        adc_control/count_i6  (to adc_control/adc_sck_temp +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay adc_control/SLICE_47 to adc_control/SLICE_47 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path adc_control/SLICE_47 to adc_control/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 */SLICE_47.CLK to *l/SLICE_47.Q1 adc_control/SLICE_47 (from adc_control/adc_sck_temp)
+ROUTE         2   e 0.199 *l/SLICE_47.Q1 to *l/SLICE_47.A1 adc_control/count_6
+CTOF_DEL    ---     0.101 *l/SLICE_47.A1 to *l/SLICE_47.F1 adc_control/SLICE_47
+ROUTE         1   e 0.001 *l/SLICE_47.F1 to */SLICE_47.DI1 adc_control/n225 (to adc_control/adc_sck_temp)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;
+            68 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.763ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              dds_control_interface/state_3__I_0_332_i2  (from dds_control_interface/state_3__N_1257 +)
+   Destination:    FF         Data in        dds_control_interface/count_7__I_84_i8  (to dds_control_interface/count_7__N_1284 +)
+
+   Delay:               0.750ns  (31.2% logic, 68.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.750ns physical path delay dds_control_interface/SLICE_195 to dds_control_interface/SLICE_164 meets
+      (delay constraint based on source clock period of 2.501ns and destination clock period of 3.340ns)
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.763ns
+
+ Physical Path Details:
+
+      Data path dds_control_interface/SLICE_195 to dds_control_interface/SLICE_164:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_195.CLK to */SLICE_195.Q0 dds_control_interface/SLICE_195 (from dds_control_interface/state_3__N_1257)
+ROUTE        28   e 0.515 */SLICE_195.Q0 to */SLICE_164.A1 dds_control_interface/state_1
+CTOF_DEL    ---     0.101 */SLICE_164.A1 to */SLICE_164.F1 dds_control_interface/SLICE_164
+ROUTE         1   e 0.001 */SLICE_164.F1 to *SLICE_164.DI1 dds_control_interface/count_7_N_1276_7 (to dds_control_interface/count_7__N_1284)
+                  --------
+                    0.750   (31.2% logic, 68.8% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;
+            81 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              dds_control_interface/data_temp_15__I_0_i2  (from dds_control_interface/data_temp_15__N_1301 +)
+   Destination:    FF         Data in        dds_control_interface/data_temp_15__I_0_i3  (to dds_control_interface/data_temp_15__N_1301 +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay dds_control_interface/SLICE_176 to dds_control_interface/SLICE_176 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path dds_control_interface/SLICE_176 to dds_control_interface/SLICE_176:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_176.CLK to */SLICE_176.Q0 dds_control_interface/SLICE_176 (from dds_control_interface/data_temp_15__N_1301)
+ROUTE         1   e 0.199 */SLICE_176.Q0 to */SLICE_176.C1 dds_control_interface/data_temp_1
+CTOF_DEL    ---     0.101 */SLICE_176.C1 to */SLICE_176.F1 dds_control_interface/SLICE_176
+ROUTE         1   e 0.001 */SLICE_176.F1 to *SLICE_176.DI1 dds_control_interface/data_temp_15_N_1285_2 (to dds_control_interface/data_temp_15__N_1301)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;
+            5 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              dds_control_interface/state_3__I_0_332_i3  (from dds_control_interface/state_3__N_1257 +)
+   Destination:    FF         Data in        dds_control_interface/state_3__I_0_332_i3  (to dds_control_interface/state_3__N_1257 +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay dds_control_interface/SLICE_195 to dds_control_interface/SLICE_195 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path dds_control_interface/SLICE_195 to dds_control_interface/SLICE_195:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 *SLICE_195.CLK to */SLICE_195.Q1 dds_control_interface/SLICE_195 (from dds_control_interface/state_3__N_1257)
+ROUTE        29   e 0.199 */SLICE_195.Q1 to */SLICE_195.B1 dds_control_interface/state_2
+CTOF_DEL    ---     0.101 */SLICE_195.B1 to */SLICE_195.F1 dds_control_interface/SLICE_195
+ROUTE         1   e 0.001 */SLICE_195.F1 to *SLICE_195.DI1 dds_control_interface/n12646 (to dds_control_interface/state_3__N_1257)
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "heart_beat/prescale[15]" 240.442000 MHz ;
+            36 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.447ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              heart_beat/count_1534_1701__i5  (from heart_beat/prescale[15] +)
+   Destination:    FF         Data in        heart_beat/count_1534_1701__i5  (to heart_beat/prescale[15] +)
+
+   Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.434ns physical path delay heart_beat/SLICE_80 to heart_beat/SLICE_80 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
+
+ Physical Path Details:
+
+      Data path heart_beat/SLICE_80 to heart_beat/SLICE_80:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133 */SLICE_80.CLK to *t/SLICE_80.Q0 heart_beat/SLICE_80 (from heart_beat/prescale[15])
+ROUTE         1   e 0.199 *t/SLICE_80.Q0 to *t/SLICE_80.A0 heart_beat/n3
+CTOF_DEL    ---     0.101 *t/SLICE_80.A0 to *t/SLICE_80.F0 heart_beat/SLICE_80
+ROUTE         1   e 0.001 *t/SLICE_80.F0 to */SLICE_80.DI0 heart_beat/n40 (to heart_beat/prescale[15])
+                  --------
+                    0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "seed_spare1_c"           |             |             |
+299.401000 MHz ;                        |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET "clk_10mhz_c" 149.723000  |             |             |
+MHz ;                                   |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/registers/data_vld_dly"  |             |             |
+159.872000 MHz ;                        |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_595"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_591"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_592"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_593"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_594"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_590"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_587"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/addr_i_7__N_596"         |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/i2cslave_controller_top/i|             |             |
+2cslave_controller_u1/sda_reg"          |             |             |
+306.185000 MHz ;                        |     0.000 ns|     1.264 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"i2c_slave_top/i2cslave_controller_top/f|             |             |
+ilter_scl_inst/out_n" 99.079000 MHz ;   |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET "reset_generator/clk_d2"  |             |             |
+399.840000 MHz ;                        |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"adc_control/adc_sck_temp" 268.168000   |             |             |
+MHz ;                                   |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"dds_control_interface/count_7__N_1284" |             |             |
+299.401000 MHz ;                        |     0.000 ns|     0.763 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"dds_control_interface/data_temp_15__N_1|             |             |
+301" 399.840000 MHz ;                   |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET                           |             |             |
+"dds_control_interface/state_3__N_1257" |             |             |
+399.840000 MHz ;                        |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+FREQUENCY NET "heart_beat/prescale[15]" |             |             |
+240.442000 MHz ;                        |     0.000 ns|     0.447 ns|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 19 clocks:
+
+Clock Domain: seed_spare1_c   Source: dds_gain_control/SLICE_437.Q0   Loads: 29
+   Covered under: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "seed_spare1_c" 299.401000 MHz ;   Transfers: 21
+
+Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0   Loads: 4
+   Covered under: FREQUENCY NET "reset_generator/clk_d2" 399.840000 MHz ;
+
+Clock Domain: i2c_slave_top/registers/data_vld_dly   Source: i2c_slave_top/SLICE_384.Q0   Loads: 20
+   Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 9
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_596   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_595   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_594   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_593   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_592   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_591   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585.F1
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_590   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586.F0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_587   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587.F0
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/registers/data_vld_dly" 159.872000 MHz ;   Transfers: 13
+
+Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0   Loads: 12
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;   Transfers: 2
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg" 306.185000 MHz ;   Transfers: 2
+
+Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0   Loads: 25
+   Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;   Transfers: 2
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n" 99.079000 MHz ;   Transfers: 11
+
+Clock Domain: i2c_slave_top/addr_i_7__N_596   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_596" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_595   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_595" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_594   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_594" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_593   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_593" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_592   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_592" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_591   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585.F1   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_591" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_590   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586.F0   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_590" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: i2c_slave_top/addr_i_7__N_587   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587.F0   Loads: 2
+   No transfer within this clock domain is found
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "i2c_slave_top/addr_i_7__N_587" 306.185000 MHz ;   Transfers: 4
+
+Clock Domain: heart_beat/prescale[15]   Source: heart_beat/SLICE_70.Q0   Loads: 6
+   Covered under: FREQUENCY NET "heart_beat/prescale[15]" 240.442000 MHz ;
+
+Clock Domain: dds_control_interface/state_3__N_1257   Source: dds_control_interface/SLICE_574.F1   Loads: 1
+   Covered under: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;   Transfers: 1
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "dds_control_interface/state_3__N_1257" 399.840000 MHz ;   Transfers: 1
+
+Clock Domain: dds_control_interface/data_temp_15__N_1301   Source: dds_control_interface/SLICE_603.F0   Loads: 9
+   Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;   Transfers: 1
+
+   Clock Domain: dds_control_interface/state_3__N_1257   Source: dds_control_interface/SLICE_574.F1
+      Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "dds_control_interface/data_temp_15__N_1301" 399.840000 MHz ;   Transfers: 17
+
+Clock Domain: dds_control_interface/count_7__N_1284   Source: dds_control_interface/SLICE_603.F1   Loads: 4
+   Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;   Transfers: 1
+
+   Clock Domain: dds_control_interface/state_3__N_1257   Source: dds_control_interface/SLICE_574.F1
+      Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;   Transfers: 2
+
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "dds_control_interface/count_7__N_1284" 299.401000 MHz ;   Transfers: 1
+
+Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD   Loads: 240
+   Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reset_generator/clk_d2   Source: reset_generator/SLICE_429.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/registers/data_vld_dly   Source: i2c_slave_top/SLICE_384.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 18
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/sda_reg   Source: i2c_slave_top/i2cslave_controller_top/SLICE_354.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 2
+
+   Clock Domain: i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n   Source: i2c_slave_top/i2cslave_controller_top/SLICE_531.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 28
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_596   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_588.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_595   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_589.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_594   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_584.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_593   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_591.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_592   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_590.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_591   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_585.F1
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_590   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_586.F0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: i2c_slave_top/addr_i_7__N_587   Source: i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1/SLICE_587.F0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 1
+
+   Clock Domain: adc_control/adc_sck_temp   Source: adc_control/SLICE_84.Q0
+      Covered under: FREQUENCY NET "clk_10mhz_c" 149.723000 MHz ;   Transfers: 32
+
+Clock Domain: adc_control/adc_sck_temp   Source: adc_control/SLICE_84.Q0   Loads: 53
+   Covered under: FREQUENCY NET "adc_control/adc_sck_temp" 268.168000 MHz ;
+
+   Data transfers from:
+   Clock Domain: clk_10mhz_c   Source: clk_10mhz.PAD
+      Covered under: FREQUENCY NET "adc_control/adc_sck_temp" 268.168000 MHz ;   Transfers: 1
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 13945 paths, 36 nets, and 4157 connections (98.18% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 5917 (setup), 0 (hold)
+Score: 1157047844 (setup), 0 (hold)
+Cumulative negative slack: 1156808263 (1156808263+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

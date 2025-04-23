@@ -1,0 +1,12 @@
+#Start recording tcl command: 4/4/2025 14:00:41
+#Project Location: C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5; Project name: seed_driver
+prj_project open "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/seed_driver.ldf"
+pgr_project close
+pgr_project open "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/impl1/impl1.xcf"
+pgr_program run
+pgr_project save "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/impl1/impl1.xcf"
+prj_run Export -impl impl1 -task Jedecgen -forceAll
+pgr_project save "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/impl1/impl1.xcf"
+prj_project save
+prj_project close
+#Stop recording: 4/8/2025 23:22:15

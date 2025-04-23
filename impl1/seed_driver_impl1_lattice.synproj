@@ -1,0 +1,55 @@
+-a "MachXO2"
+-d LCMXO2-2000HC
+-t TQFP100
+-s 4
+-frequency 200
+-optimization_goal Timing
+-bram_utilization 100
+-ramstyle Auto
+-romstyle auto
+-dsp_utilization 100
+-use_dsp 1
+-use_carry_chain 1
+-carry_chain_length 0
+-force_gsr Auto
+-resource_sharing 1
+-propagate_constants 1
+-remove_duplicate_regs 1
+-mux_style Auto
+-max_fanout 1000
+-fsm_encoding_style Auto
+-twr_paths 3
+-fix_gated_clocks 1
+-loop_limit 1950
+
+
+
+
+-use_io_insertion 1
+-resolve_mixed_drivers 0
+-use_io_reg auto
+
+
+-lpf 1
+-p "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5"
+-ver "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/top.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/registers.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/i2c_slave_top.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/heart_beat.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/adc_control.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/dds_gain_control.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/dds_control_interface.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/i2cslave_controller_top.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/i2cslave_controller.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/reset_generator.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/src/filter.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/TestBench/top_tb.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/TestBench/tb_defines.v"
+"C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/TestBench/i2c_master.v"
+-top top
+
+
+-p "C:/lscc/diamond/3.13/ispfpga/xo2c00/data" "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/impl1" "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5"
+
+-ngd "seed_driver_impl1.ngd"
+
