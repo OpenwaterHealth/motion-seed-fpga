@@ -1,153 +1,0 @@
-<HTML>
-<HEAD><TITLE>I/O Timing Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
-9 potential circuit loops found in timing analysis.
-Loading design for application iotiming from file seed_driver_impl1.ncd.
-Design name: top
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO2-2000HC
-Package:     TQFP100
-Performance: 5
-Package Status:                     Final          Version 1.44.
-Performance Hardware Data Status:   Final          Version 34.4.
-Loading design for application iotiming from file seed_driver_impl1.ncd.
-Design name: top
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO2-2000HC
-Package:     TQFP100
-Performance: 6
-Package Status:                     Final          Version 1.44.
-Performance Hardware Data Status:   Final          Version 34.4.
-Loading design for application iotiming from file seed_driver_impl1.ncd.
-Design name: top
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO2-2000HC
-Package:     TQFP100
-Performance: M
-Package Status:                     Final          Version 1.44.
-Performance Hardware Data Status:   Final          Version 34.4.
-// Design: top
-// Package: TQFP100
-// ncd File: seed_driver_impl1.ncd
-// Version: Diamond (64-bit) 3.13.0.56.2
-// Written on Tue Apr 08 23:20:52 2025
-// M: Minimum Performance Grade
-// iotiming seed_driver_impl1.ncd seed_driver_impl1.prf -gui -msgset C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_5/promote.xml
-
-I/O Timing Report (All units are in ns)
-
-Worst Case Results across Performance Grades (M, 6, 5, 4):
-
-// Input Setup and Hold Times
-
-Port           Clock     Edge  Setup Performance_Grade  Hold Performance_Grade
-----------------------------------------------------------------------
-rstn           clk_10mhz R     1.680      4       0.144     6
-scl            clk_10mhz R     1.240      4       0.262     6
-sda            clk_10mhz R     1.473      4       0.122     6
-seed_compared  clk_10mhz R     1.866      4       0.115     M
-system_reset_n clk_10mhz R     1.998      4       0.035     M
-
-
-// Clock to Output Delay
-
-Port                Clock     Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
-------------------------------------------------------------------------
-mcu_gpio            clk_10mhz R    11.447         4        3.491          M
-seed_adc_convert    clk_10mhz R    10.107         4        3.143          M
-seed_adc_sck        clk_10mhz R    15.051         4        3.597          M
-seed_dac_sck        clk_10mhz R    10.076         4        3.129          M
-seed_dac_ss         clk_10mhz R    13.110         4        3.917          M
-seed_laser_en_led_n clk_10mhz R    13.520         4        3.960          M
-seed_ldac_n         clk_10mhz R    10.422         4        3.215          M
-seed_mod_sck        clk_10mhz R    10.876         4        3.342          M
-seed_mod_ss         clk_10mhz F    10.995         4        3.390          M
-seed_spare1         clk_10mhz R    14.475         4        4.371          M
-seed_spare3         clk_10mhz R    10.195         4        3.140          M
-seed_spare4         clk_10mhz R    11.687         4        3.567          M
-
-
-// Internal_Clock to Input
-
-Port           Internal_Clock                                             
---------------------------------------------------------
-rstn           reset_generator/clk_d2                                     
-seed_adc_sdo1  adc_control/adc_sck_temp                                   
-seed_adc_sdo2  adc_control/adc_sck_temp                                   
-
-
-// Internal_Clock to Output
-
-Port          Internal_Clock                                             
---------------------------------------------------------
-heartbeat_n   heart_beat/prescale[15]                                    
-sda           i2c_slave_top/i2cslave_controller_top/filter_scl_inst/out_n
-seed_dac_mosi seed_spare1_c                                              
-seed_mod_mosi dds_control_interface/data_temp_15__N_1301                 
-seed_spare2   seed_spare1_c                                              
-WARNING: you must also run trce with hold speed: 6
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>
