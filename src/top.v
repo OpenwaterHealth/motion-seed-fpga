@@ -86,15 +86,15 @@ wire [15:0] control;
 wire        over_current_limit;
 
 wire dds_control_update;
-wire dds_current_update;
-wire current_limit_update;
 wire dds_mon_current_update;
 wire cw_mon_current_update;
 
 wire dds_gain_update;
 wire cw_gain_update;
-wire update_limit;
-wire update_mon_limit;
+wire dds_current_limit_update;
+wire cw_current_limit_update;
+wire dds_mon_current_limit_update;
+wire cw_mon_current_limit_update;
 
 wire spi_dds_gain_control_ready,spi_dds_control_ready;
 wire dds_gain_control_mosi,dds_control_mosi;
@@ -114,11 +114,6 @@ wire auto_run;
 wire test_mode;
 
 assign dds_control_update       = control[0];
-assign dds_gain_update          = control[1];
-assign cw_gain_update           = control[2];
-assign current_limit_update     = control[3];
-assign dds_mon_current_update   = control[5];
-assign cw_mon_current_update    = control[6];
 assign mcu_gpio                 = control[15];
 
 
@@ -188,6 +183,14 @@ i2c_slave_top i2c_slave_top (
     .cw_gain 				(cw_gain),
     .dds_current_limit 		(dds_current_limit),
     .cw_current_limit 		(cw_current_limit),
+	
+    .dds_gain_update 		   (dds_gain_update),
+    .cw_gain_update 		   (cw_gain_update),
+    .dds_current_limit_update (dds_current_limit_update),
+    .cw_current_limit_update  (cw_current_limit_update),
+    .dds_mon_current_limit_update (dds_mon_current_limit_update),
+    .cw_mon_current_limit_update  (cw_mon_current_limit_update),
+
     .dds_mon_current_limit 	(dds_mon_current_limit),
     .cw_mon_current_limit 	(cw_mon_current_limit),
     .control 	            (control),
@@ -204,9 +207,10 @@ dds_gain_control dds_gain_control(
     .dds_current_limit  (dds_current_limit),
     .cw_current_limit   (cw_current_limit),
 
-    .dds_gain_update      (dds_gain_update),
-    .cw_gain_update       (cw_gain_update),
-    .current_limit_update (current_limit_update),
+    .dds_gain_update          (dds_gain_update),
+    .cw_gain_update           (cw_gain_update),
+    .dds_current_limit_update (dds_current_limit_update),
+    .cw_current_limit_update  (cw_current_limit_update),
 
     .mosi               (seed_dac_mosi),
     .ss                 (seed_dac_ss),
@@ -240,7 +244,8 @@ adc_control adc_control(
     .dds_cw_mode_select     (dds_cw_mode_select),
     .dds_mon_current_limit  (dds_mon_current_limit),
     .cw_mon_current_limit   (cw_mon_current_limit),
-    .update_mon_limit       (update_mon_limit),
+    .dds_mon_current_limit_update (dds_mon_current_limit_update),
+    .cw_mon_current_limit_update  (cw_mon_current_limit_update),
     .adc_status_clear       (adc_status_clear),
 
     .adc_data_valid         (adc_data_valid),
