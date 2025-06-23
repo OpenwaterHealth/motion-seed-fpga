@@ -12,7 +12,8 @@ module dds_gain_control(
 
     input        dds_gain_update,
     input        cw_gain_update,
-    input        current_limit_update,
+    input        dds_current_limit_update,
+    input        cw_current_limit_update,
 
     output       mosi,
     output       ss,
@@ -49,11 +50,11 @@ reg        sck_temp=0;
 reg        mosi_temp=0;
 reg        ldac_temp=1;
 
-reg [15:0] dds_gain_reg;
-reg [15:0] cw_gain_reg;
+reg [15:0] dds_gain_reg,dds_gain_d1;
+reg [15:0] cw_gain_reg,cw_gain_d1;
 reg [15:0] dds_current_limit_reg;
 reg [15:0] cw_current_limit_reg;
-
+reg dds_gain_update_d1,cw_gain_update_d1;
 reg [15:0] dds_gain_reg_old;
 reg [15:0] cw_gain_reg_old;
 	
@@ -73,15 +74,23 @@ always @(posedge clk or negedge rstn) begin
           if (!rstn) begin
                dds_gain_reg <= 16'h6050;
                cw_gain_reg <= 16'h0;
+               dds_gain_d1 <= 16'h0;
+               cw_gain_d1 <= 16'h0;
+               dds_gain_update_d1 <= 0;
+               cw_gain_update_d1 <= 0;
           end else begin
-                         if (dds_gain_update) begin
-                             if (dds_gain < dds_current_limit_reg) begin
-                                 dds_gain_reg <= dds_gain;
+                         dds_gain_d1 <= dds_gain;
+                         cw_gain_d1 <= cw_gain;
+                         dds_gain_update_d1 <= dds_gain_update;
+                         cw_gain_update_d1 <= cw_gain_update;
+                         if (dds_gain_update_d1) begin
+                             if (dds_gain_d1 < dds_current_limit_reg) begin
+                                 dds_gain_reg <= dds_gain_d1;
                              end
                          end
-                         if (cw_gain_update) begin
-                             if (cw_gain < cw_current_limit_reg) begin
-                                 cw_gain_reg <= cw_gain;
+                         if (cw_gain_update_d1) begin
+                             if (cw_gain_d1 < cw_current_limit_reg) begin
+                                 cw_gain_reg <= cw_gain_d1;
                              end
                          end
                     end
@@ -207,10 +216,8 @@ always @(posedge clk or negedge rstn) begin
         dds_current_limit_reg <= 16'hffff;
         cw_current_limit_reg <= 16'hffff;
     end else begin
-                 if (current_limit_update) begin
-                     dds_current_limit_reg <= dds_current_limit;
-                     cw_current_limit_reg <= cw_current_limit;
-                 end
+                 if (dds_current_limit_update) dds_current_limit_reg <= dds_current_limit;
+                 if (cw_current_limit_update)  cw_current_limit_reg <= cw_current_limit;
              end
 end
 
@@ -219,12 +226,12 @@ always @(posedge clk or negedge rstn or posedge data_valid_reset) begin
          data <= 0;
          data_valid <= 0;
     end else begin
-                 if (dds_gain_update) begin
+                 if (dds_gain_update_d1) begin
                      data <= {WRITE_UPDATE_DAC_CHANNEL,4'h1,dds_gain_reg};
 					 data_valid <= 1;
 				 end 
 				 
-				 if (cw_gain_update) begin
+				 if (cw_gain_update_d1) begin
 					 data <= {WRITE_UPDATE_DAC_CHANNEL,4'h8,cw_gain_reg};
 					 data_valid <= 1;
 				 end

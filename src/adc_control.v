@@ -27,7 +27,8 @@ module adc_control(
     input              dds_cw_mode_select,
     input [15:0]      dds_mon_current_limit,
     input [15:0]      cw_mon_current_limit,
-    input              update_mon_limit,
+    input              dds_mon_current_limit_update,
+    input              cw_mon_current_limit_update,
 
     input              adc_status_clear,
 
@@ -81,10 +82,8 @@ begin
         dds_current_limit_temp <= 0;     
         cw_current_limit_temp <= 0;     
     end else begin
-                   if (update_mon_limit) begin
-                       dds_current_limit_temp <= dds_mon_current_limit;
-                       cw_current_limit_temp <= cw_mon_current_limit;
-                   end
+                   if (dds_mon_current_limit_update) dds_current_limit_temp <= dds_mon_current_limit;
+                   if (cw_mon_current_limit_update) cw_current_limit_temp <= dds_mon_current_limit;
              end
 end
 

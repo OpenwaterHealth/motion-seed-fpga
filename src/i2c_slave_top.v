@@ -34,6 +34,14 @@ module i2c_slave_top(
     output [15:0] cw_gain,
     output [15:0] dds_current_limit,
     output [15:0] cw_current_limit,
+	
+    output        dds_gain_update,
+    output        cw_gain_update,
+    output        dds_current_limit_update,
+    output        cw_current_limit_update,
+    output        dds_mon_current_limit_update,
+    output        cw_mon_current_limit_update,
+
     output [15:0] dds_mon_current_limit,
     output [15:0] cw_mon_current_limit,
     output [15:0] control,
@@ -86,9 +94,17 @@ registers registers(
 	.cw_gain 				(cw_gain),
 	.dds_current_limit 		(dds_current_limit),
 	.cw_current_limit 		(cw_current_limit),
-	.dds_mon_current_limit 	(dds_mon_current_limit),
-	.cw_mon_current_limit 	(cw_mon_current_limit),
 	
+	.dds_gain_update 		  (dds_gain_update),
+	.cw_gain_update 		  (cw_gain_update),
+	.dds_current_limit_update (dds_current_limit_update),
+	.cw_current_limit_update  (cw_current_limit_update),
+
+	.dds_mon_current_limit 	       (dds_mon_current_limit),
+	.cw_mon_current_limit 	       (cw_mon_current_limit),
+	.dds_mon_current_limit_update  (dds_mon_current_limit_update),
+	.cw_mon_current_limit_update   (cw_mon_current_limit_update),
+
 	.control 		        (control),
 	.static_control 		(static_control)
 	

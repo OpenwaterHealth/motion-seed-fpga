@@ -21,6 +21,12 @@ module registers(
     output reg [15:0] cw_gain,
     output reg [15:0] dds_current_limit,
     output reg [15:0] cw_current_limit,
+    output reg        dds_gain_update,
+    output reg        cw_gain_update,
+    output reg        dds_current_limit_update,
+    output reg        cw_current_limit_update,
+    output reg        dds_mon_current_limit_update,
+    output reg        cw_mon_current_limit_update,
     output reg [15:0] dds_mon_current_limit,
     output reg [15:0] cw_mon_current_limit,
     output reg [15:0] control,
@@ -51,6 +57,7 @@ wire			stretch_wire;
 reg				skip_cnt;
 reg [3:0]      count;
 reg             data_vld_dly;
+reg [3:0]      update_count;
 
 //Parameters
 parameter		s0_r_w				=	2'b00;			// check if the request is read or write.
@@ -71,11 +78,18 @@ assign stretch_on = stretch_wire;
 always @ (posedge clk or posedge rst) begin
 	if (rst) begin
 	    count <= 0;
+	    update_count <= 0;
 	    dds_control <= 0;
 		dds_gain <=0;
-		cw_gain <= 0;
-		dds_current_limit <=16'hffff;
-		cw_current_limit <= 16'hffff;
+		cw_gain <= 16'h0000;
+		dds_gain <=0;
+		dds_gain_update <=0;
+		cw_gain_update <=0;
+		dds_current_limit_update <=0;
+		cw_current_limit_update <=0;
+
+		dds_current_limit <=16'h3dae;
+		cw_current_limit <= 16'h523d;
 		dds_mon_current_limit <=0;
 		cw_mon_current_limit <= 0;
 		control <=0;
@@ -88,18 +102,58 @@ always @ (posedge clk or posedge rst) begin
 				   end else count <= count + 1;
 			   end
 			   
+			   if (cw_gain_update > 0) begin
+				   if (update_count > 1) begin
+					   update_count <= 0;
+					   cw_gain_update <= 0;
+				   end else update_count <= update_count + 1;
+			   end
+
+			   if (dds_gain_update > 0) begin
+				   if (update_count > 1) begin
+					   update_count <= 0;
+					   dds_gain_update <= 0;
+				   end else update_count <= update_count + 1;
+			   end
+
+			   if (dds_current_limit_update > 0) begin
+				   if (update_count > 1) begin
+					   update_count <= 0;
+					   dds_current_limit_update <= 0;
+				   end else update_count <= update_count + 1;
+			   end
+
+			   if (cw_current_limit_update > 0) begin
+				   if (update_count > 1) begin
+					   update_count <= 0;
+					   cw_current_limit_update <= 0;
+				   end else update_count <= update_count + 1;
+			   end
+
 			   if (wr_en_i) begin
 				   case (addr_i)
 						 8'h0 : dds_control[7:0]  		  <= i2c_to_data;
 					     8'h1 : dds_control[15:8] 		  <= i2c_to_data;
 					     8'h2 : dds_gain[7:0]     		  <= i2c_to_data;
-						 8'h3 : dds_gain[15:8]    	      <= i2c_to_data;
-						 8'h4 : cw_gain[7:0]     			 <= i2c_to_data;
-						 8'h5 : cw_gain[15:8]    			 <= i2c_to_data;
+						 8'h3 : begin
+									dds_gain[15:8]    	   <= i2c_to_data;
+									dds_gain_update        <= 1;
+								end
+						 8'h4 : cw_gain[7:0]             <= i2c_to_data;
+						 8'h5 : begin
+									cw_gain[15:8]        <= i2c_to_data;
+									cw_gain_update        <= 1;
+								end
 						 8'h6 : dds_current_limit[7:0]      <= i2c_to_data;
-						 8'h7 : dds_current_limit[15:8]     <= i2c_to_data;
+						 8'h7 : begin
+									dds_current_limit[15:8]   <= i2c_to_data;
+									dds_current_limit_update   <= 1;
+								end
 						 8'h8 : cw_current_limit[7:0]       <= i2c_to_data;
-						 8'h9 : cw_current_limit[15:8]      <= i2c_to_data;
+						 8'h9 : begin
+									cw_current_limit[15:8]   <= i2c_to_data;
+									cw_current_limit_update   <= 1;
+								end
 					     8'hA : dds_mon_current_limit[7:0]  <= i2c_to_data;
 						 8'hB : dds_mon_current_limit[15:8] <= i2c_to_data;
 					     8'hC : cw_mon_current_limit[7:0]   <= i2c_to_data;
