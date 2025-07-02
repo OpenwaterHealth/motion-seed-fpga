@@ -84,6 +84,10 @@ wire [15:0] adc_current_limit;
 wire [15:0] static_control;
 wire [15:0] control;
 wire        over_current_limit;
+wire [7:0]  revision;
+wire [7:0]  minor;
+wire [7:0]  major;
+wire [7:0]  ID;
 
 wire dds_control_update;
 wire dds_mon_current_update;
@@ -154,6 +158,10 @@ assign status = {4'h0,system_reset_n,laser_active,seed_compared,over_current_lim
 assign buf_clk = clk_10mhz;
 assign buf_rstn = rstn  & system_reset_n;
 assign seed_reset_n = 1;
+assign revision = 8'h3;
+assign minor    = 8'h0;
+assign major    = 8'h0;
+assign ID       = 8'h1;
 
 reset_generator reset_generator( 
     .rstn      (rstn),
@@ -178,6 +186,12 @@ i2c_slave_top i2c_slave_top (
     .adc_current_data 		(adc_current_data),
     .monitor_status 		(monitor_status),
     .status 				(status),
+	
+	.revision 				(revision),
+	.minor 				    (minor),
+	.major 				    (major),
+	.ID 				    (ID),
+
     .dds_control 			(dds_control),
     .dds_gain 				(dds_gain),
     .cw_gain 				(cw_gain),

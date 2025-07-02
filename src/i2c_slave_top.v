@@ -28,6 +28,10 @@ module i2c_slave_top(
     input [15:0]  adc_current_data,
     input [7:0]   monitor_status,
     input [7:0]   status,
+	input [7:0]   revision,
+    input [7:0]   minor,
+    input [7:0]   major,
+    input [7:0]   ID,
 
     output [15:0] dds_control,
     output [15:0] dds_gain,
@@ -89,6 +93,12 @@ registers registers(
 	.adc_current_data 		(adc_current_data),
 	.monitor_status 		(monitor_status),
 	.status 				(status),
+	
+	.revision 				(revision),
+	.minor 				    (minor),
+	.major 				    (major),
+	.ID 				    (ID),
+
 	.dds_control 			(dds_control),
 	.dds_gain 				(dds_gain),
 	.cw_gain 				(cw_gain),
