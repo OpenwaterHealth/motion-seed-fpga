@@ -15,6 +15,11 @@ module registers(
     input [15:0]  		adc_voltage_data,
     input [7:0]   		monitor_status,
     input [7:0]   		status,
+	input [7:0]     	revision,
+    input [7:0]     	minor,
+    input [7:0]     	major,
+    input [7:0]     	ID,
+
 
     output reg [15:0] dds_control,
     output reg [15:0] dds_gain,
@@ -198,6 +203,12 @@ always @ (posedge clk or posedge rst) begin
 				     8'h10 : data_out <= adc_voltage_data[7:0];
 					 8'h11 : data_out <= adc_voltage_data[15:8];
 					 8'h12 : data_out <= status;
+					 8'h13 : data_out <= revision;
+					 8'h14 : data_out <= minor;
+					 8'h15 : data_out <= major;
+					 8'h16 : data_out <= ID;
+
+
 					 8'h20 : data_out <= static_control[7:0];
 					 8'h21 : data_out <= static_control[15:8];
 					  default : data_out <= 0;
