@@ -7,8 +7,8 @@ module dds_gain_control(
     input [15:0] dds_gain,
     input [15:0] cw_gain,
 
-    input [15:0] dds_current_limit,
-    input [15:0] cw_current_limit,
+    input [15:0] dds_current_limit,    //16'h1072;    // Limit 80mA
+    input [15:0] cw_current_limit,     //16'h20e5;    // limit 160mA
 
     input        dds_gain_update,
     input        cw_gain_update,
@@ -213,13 +213,14 @@ end
 
 always @(posedge clk or negedge rstn) begin
     if (!rstn) begin
-        dds_current_limit_reg <= 16'hffff;
-        cw_current_limit_reg <= 16'hffff;
+        dds_current_limit_reg <= 16'h1072;    // Limit 80mA
+        cw_current_limit_reg <= 16'h20e5;    // limit 160mA
     end else begin
                  if (dds_current_limit_update) dds_current_limit_reg <= dds_current_limit;
-                 if (cw_current_limit_update)  cw_current_limit_reg <= cw_current_limit;
+                 if (cw_current_limit_update) cw_current_limit_reg <= cw_current_limit;
              end
 end
+
 
 always @(posedge clk or negedge rstn or posedge data_valid_reset) begin
     if (!rstn | data_valid_reset) begin

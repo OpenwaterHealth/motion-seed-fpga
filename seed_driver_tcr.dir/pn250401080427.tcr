@@ -1,5 +1,0 @@
-#Start recording tcl command: 4/1/2025 06:30:05
-#Project Location: C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_4; Project name: seed_driver
-prj_project open "C:/Project/Working/FPGA/HOME/Lattice/Seed_Driver/Rev_4/seed_driver.ldf"
-prj_project close
-#Stop recording: 4/1/2025 08:04:27

@@ -92,9 +92,11 @@ always @ (posedge clk or posedge rst) begin
 		cw_gain_update <=0;
 		dds_current_limit_update <=0;
 		cw_current_limit_update <=0;
-
-		dds_current_limit <=16'h3dae;
-		cw_current_limit <= 16'h523d;
+		
+		dds_current_limit <=16'h1072;    // Limit 80mA
+		cw_current_limit <= 16'h20e5;    // limit 160mA
+	//	dds_current_limit <=16'h3dae;
+	//	cw_current_limit <= 16'h523d;
 		dds_mon_current_limit <=0;
 		cw_mon_current_limit <= 0;
 		control <=0;

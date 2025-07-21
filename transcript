@@ -1,0 +1,297 @@
+# Reading pref.tcl
+# do {D:/FPGA/62062025/Seed_Driver/Rev_6/test/test.mdo}
+# Loading project test
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:48 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v 
+# -- Compiling module adc_control
+# 
+# Top level modules:
+# 	adc_control
+# End time: 09:18:48 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:48 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/dds_control_interface.v 
+# -- Compiling module dds_control_interface
+# 
+# Top level modules:
+# 	dds_control_interface
+# End time: 09:18:48 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:48 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/dds_gain_control.v 
+# -- Compiling module dds_gain_control
+# 
+# Top level modules:
+# 	dds_gain_control
+# End time: 09:18:48 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:48 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/registers.v 
+# -- Compiling module registers
+# 
+# Top level modules:
+# 	registers
+# End time: 09:18:48 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:48 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller.v 
+# -- Compiling module i2cslave_controller
+# 
+# Top level modules:
+# 	i2cslave_controller
+# End time: 09:18:49 on Jun 23,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:49 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/filter.v 
+# -- Compiling module filter
+# 
+# Top level modules:
+# 	filter
+# End time: 09:18:49 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:49 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v 
+# -- Compiling module i2cslave_controller_top
+# 
+# Top level modules:
+# 	i2cslave_controller_top
+# End time: 09:18:49 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:49 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v 
+# -- Compiling module i2c_slave_top
+# 
+# Top level modules:
+# 	i2c_slave_top
+# End time: 09:18:49 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:49 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/heart_beat.v 
+# -- Compiling module heart_beat
+# 
+# Top level modules:
+# 	heart_beat
+# End time: 09:18:49 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:49 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/reset_generator.v 
+# -- Compiling module reset_generator
+# 
+# Top level modules:
+# 	reset_generator
+# End time: 09:18:50 on Jun 23,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:50 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/src" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 09:18:50 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:50 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/i2c_master.v 
+# -- Compiling module i2c_master
+# 
+# Top level modules:
+# 	i2c_master
+# End time: 09:18:50 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:50 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v 
+# -- Compiling module top_tb
+# 
+# Top level modules:
+# 	top_tb
+# End time: 09:18:50 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Lattice FPGA Edition vlog 2023.3 Compiler 2023.07 Jul 18 2023
+# Start time: 09:18:50 on Jun 23,2025
+# vlog -reportprogress 300 "+incdir+D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench" -work work D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/tb_defines.v 
+# End time: 09:18:50 on Jun 23,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L work -L pmi_work -L ovi_machxo2 top_tb 
+# Start time: 09:18:50 on Jun 23,2025
+# //  ModelSim - Lattice FPGA Edition 2023.3 Jul 18 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim - Lattice FPGA Edition and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.top_tb
+# Loading work.i2c_master
+# Loading work.top
+# Loading work.reset_generator
+# Loading work.heart_beat
+# Loading work.i2c_slave_top
+# Loading work.i2cslave_controller_top
+# Loading work.filter
+# Loading work.i2cslave_controller
+# Loading work.registers
+# Loading work.dds_gain_control
+# Loading work.dds_control_interface
+# Loading work.adc_control
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'top'.  Expected 33, found 32.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top File: D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'seed_adc_sdo2'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v(34).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top File: D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'seed_compared'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top File: D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v Line: 81
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v(81): [TFMPC] - Missing connection for port 'seed_adc_sdo1'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'monitor_status'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 170
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'dds_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 170
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'cw_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v(46).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 170
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i2cslave_controller_u1'.  Expected 26, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1 File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v Line: 124
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_intr'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_rx_status'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_data_request'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_init_done'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_rd_done'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_timeout_err'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_init_intr'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_timeout_intr'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dds_gain_control'.  Expected 15, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/dds_gain_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 201
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v(201): [TFMPC] - Missing connection for port 'spi_ready'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'dds_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/adc_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 238
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'cw_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/adc_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 238
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'monitor_status'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/adc_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 238
+# .main_pane.wave.interior.cs.body.pw.wf
+add wave -position end sim:/top_tb/top/dds_gain_control/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'top'.  Expected 33, found 32.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top File: D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'seed_adc_sdo2'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v(34).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top File: D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v Line: 81
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'seed_compared'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top File: D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v Line: 81
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/top_tb.v(81): [TFMPC] - Missing connection for port 'seed_adc_sdo1'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'monitor_status'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 170
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'dds_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 170
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'cw_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2c_slave_top.v(46).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 170
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'i2cslave_controller_u1'.  Expected 26, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/i2c_slave_top/i2cslave_controller_top/i2cslave_controller_u1 File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v Line: 124
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_intr'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_rx_status'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_data_request'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_init_done'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_rd_done'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_timeout_err'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_init_intr'.
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/i2cslave_controller_top.v(124): [TFMPC] - Missing connection for port 'o_timeout_intr'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dds_gain_control'.  Expected 15, found 14.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/dds_gain_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 201
+# ** Warning: (vsim-3722) D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v(201): [TFMPC] - Missing connection for port 'spi_ready'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'dds_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/adc_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 238
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'cw_mon_current_limit'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/adc_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 238
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (1) for port 'monitor_status'. The port definition is at: D:/FPGA/62062025/Seed_Driver/Rev_6/src/adc_control.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb/top/adc_control File: D:/FPGA/62062025/Seed_Driver/Rev_6/src/top.v Line: 238
+run -all
+#               103002: The I2C Master Has Generated a Start Condition.
+#  
+#               181502: The I2C Master Sends the 7-bit I2C Address 0x41 (0b1000001)
+#  
+#               274752: The I2C Master Sends the I2C Register Byte 0x04
+#  
+#               370502: I2C Master Write Data = 0x21
+#  
+#               465002: I2C Master Write Data = 0x11
+#  
+#               491052: The I2C Master Has Generated a Stop Condition
+#              --------------------------------------------------------
+#  
+#  
+#               601502: The I2C Master Has Generated a Start Condition.
+#  
+#               680002: The I2C Master Sends the 7-bit I2C Address 0x41 (0b1000001)
+#  
+#               773252: The I2C Master Sends the I2C Register Byte 0x0e
+#  
+#               869002: I2C Master Write Data = 0x01
+#  
+#               895052: The I2C Master Has Generated a Stop Condition
+#              --------------------------------------------------------
+#  
+#  
+#              1005502: The I2C Master Has Generated a Start Condition.
+#  
+#              1084002: The I2C Master Sends the 7-bit I2C Address 0x41 (0b1000001)
+#  
+#              1177252: The I2C Master Sends the I2C Register Byte 0x00
+#  
+#              1204502: The I2C Master Has Generated a Repeat Start Condition.
+#  
+#              1296502: The I2C Master Sends the 7-bit I2C Address 0x41 (0b1000001)
+#  
+#              1380502: I2C Master Read Data = 0x00
+#  
+#              1475002: I2C Master Read Data = 0x00
+#  
+#              1569502: I2C Master Read Data = 0x00
+#  
+#              1664002: I2C Master Read Data = 0x00
+#  
+#              1758502: I2C Master Read Data = 0x21
+#  
+#              1853002: I2C Master Read Data = 0x11
+#  
+#              1876552: The I2C Master Has Generated a Stop Condition
+#              --------------------------------------------------------
+#  
+#  
+#              1987002: The I2C Master Has Generated a Start Condition.
+#  
+#              2065502: The I2C Master Sends the 7-bit I2C Address 0x41 (0b1000001)
+#  
+#              2158752: The I2C Master Sends the I2C Register Byte 0x02
+#  
+#              2186052: The I2C Master Has Generated a Stop Condition
+#              --------------------------------------------------------
+#  
+#  
+#              2296502: The I2C Master Has Generated a Start Condition.
+#  
+#              2388002: The I2C Master Sends the 7-bit I2C Address 0x41 (0b1000001)
+#  
+#              2472002: I2C Master Read Data = 0x00
+#  
+#              2495552: The I2C Master Has Generated a Stop Condition
+#              --------------------------------------------------------
+#  
+#  
+# ** Note: $stop    : D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/i2c_master.v(232)
+#    Time: 2595558 ns  Iteration: 0  Instance: /top_tb/master_uut
+# Break in Module i2c_master at D:/FPGA/62062025/Seed_Driver/Rev_6/TestBench/i2c_master.v line 232
